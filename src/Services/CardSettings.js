@@ -25,9 +25,10 @@ export class CardSettings{
     randomArt = () => ["arranca.jpg","bicho.jpeg","blizzard.png",
                         "coso.jpg","elem.jpg","enano.jpg","fire.jpg",
                         "fire2.jpg","ghostrider.jpg","golem.jpg","mago.jpg",
-                        "rayo.jpg","rayo2.jpg","tigre.jpeg","vamp.jpg"][Math.random(16)]
-    randomRarity = () => this.rarities[Math.random(3)]
-    randomName = () => `${this.adjetives[Math.random(10)]} ${this.nouns[Math.random(10)]}`
+                        "rayo.jpg","rayo2.jpg","tigre.jpeg","vamp.jpg"][getRandomInt(0,16)]
+    randomRarity = () => this.rarities[getRandomInt(0,3)]
+    randomName = () => `${this.adjetives[getRandomInt(0,10)]} ${this.nouns[getRandomInt(0,10)]}`
+    
 
     randomDescription(){
         var startingIndex = getRandomInt(0,this.lorem.Length/2);
