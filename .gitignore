@@ -1,0 +1,13 @@
+UnityPackageManager/
+node_modules/
+node_modules.meta
+Assets/Standard Assets/node_modules.meta
+JetBrains/
+.DS_Store
+*.csproj
+Library/
+.idea/
+*.sln
+Temp/
+.upm/
+obj/

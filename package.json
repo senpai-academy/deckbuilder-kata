@@ -1,0 +1,7 @@
+{
+    "name": "@etermax/kata-ui",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@etermax/upm-editor-plugin": "latest"
+    }
+}
