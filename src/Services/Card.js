@@ -4,24 +4,20 @@ export class Card{
         this.name = settings.randomName();
         this.description = settings.randomDescription();
         this.cost = settings.randomCost();
-        this.cardType = CardType[Math.random(3)];
+        this.cardType = settings.randomCardType();
         this.attackScore = settings.randomAttack();
         this.defenseScore = settings.randomDefense();
         this.art = settings.randomArt();
-        this.rarity = settings.rarities[Math.random(settings.rarities.length)]
+        this.rarity = settings.randomRarity();
     }
 }
 
-export const CardType = {
-    Creature: 0,
-    Instant: 1,
-    Spell: 2
-}
+
 
 export const RarityValue = {
-    Common: 0,
-    Uncommon: 1,
-    Rare: 2
+    Common: "Common",
+    Uncommon: "Uncommon",
+    Rare: "Rare"
 }
 
 export class Rarity{

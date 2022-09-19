@@ -16,6 +16,7 @@ export class CardSettings{
                         new Rarity(RarityValue.Rare,"#F3E658")];
         this.adjetives = ["Fiery","Furious","Corrosive","Explosive",
                         "Raging","Golden","Frost","Deadly","Healing","Avenging"];
+        this.cardTypes = ["Creature","Spell","Instant"];
         this.nouns = ["Goblin","Orc","Bolt","Wyrm","Strike","Vampire","Demon","Angel","Reaper","Curse"];
     }
 
@@ -28,7 +29,8 @@ export class CardSettings{
                         "rayo.jpg","rayo2.jpg","tigre.jpeg","vamp.jpg"][getRandomInt(0,16)]
     randomRarity = () => this.rarities[getRandomInt(0,3)]
     randomName = () => `${this.adjetives[getRandomInt(0,10)]} ${this.nouns[getRandomInt(0,10)]}`
-    
+    randomRarity = () => this.rarities[getRandomInt(0,3)];
+    randomCardType = () => this.cardTypes[getRandomInt(0,3)]
 
     randomDescription(){
         var startingIndex = getRandomInt(0,this.lorem.Length/2);
