@@ -1,14 +1,13 @@
-# Kata - Deck Manager in Unity
+# Kata - Deck Manager in React
 
-The goal of this exercise is to master most of the vital UI components in Unity Game Engine.
+The goal of this exercise is to master most of the vital UI components in React.
 
 ## Rules of engagement
 * The resolution set for this project will be 1920x1080p
+* It is appreciated if the project is responsive
 * The final product must support Portrait AND Landscape orientations
-* All scrollable elements must implement a mask
 * The project contains sprites for this kata.
 * The project contains some helpfull scripts.
-* This exercise was designed for Unity 2018
 
 ## Part 1 - Card Bank
 * Create a panel where all cards are listed as simple rows.
@@ -48,5 +47,3 @@ The goal of this exercise is to master most of the vital UI components in Unity 
 * [Landscape](https://drive.google.com/file/d/1OVgxbDO1Qbd_WsFZKv2rkIbEBFyiOcWG/view?usp=sharing)
 * [Protrait](https://drive.google.com/file/d/1BIj8lxsoEcGva06sahJTNBrBvJMa8stB/view?usp=sharing)
 
-## Callistenics:
-* Gameobject component cannot modify states outside its own Hierarchy. Example: DeckInfoPanel.TotalCards.text = 5;
