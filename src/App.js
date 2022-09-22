@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { CardGenerator } from './Services/CardGenerator';
-import Panel from './components/Panel';
+import Panel from './components/panel';
 
 function App() {
 
