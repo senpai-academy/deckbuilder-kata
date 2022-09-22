@@ -7,21 +7,10 @@ function App() {
   const card = new CardGenerator().generateCard();
   console.log(card)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="GridMain">
+        <div id="DeckGrid" className="backGround">a</div>
+        <div id="CardBank" className="backGround">b</div>
+        <div id="DeckInfo" className="backGround">c</div>
     </div>
   );
 }
