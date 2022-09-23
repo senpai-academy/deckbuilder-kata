@@ -9,14 +9,21 @@ html{
 }
 
 
-
-main{
+.cardBankContainer{
   background-image: url("../public/Sprites/Panels/Panel.png");
-  background-size: cover;
-  height:768px;
+  background-size:contain;
+  background-position: center;
+  height: 95vh;
   width: 100%;
   background-repeat: no-repeat;
   font-family: 'RINGM';
-  color: black;
+  color: white;
+}
+
+.cardBankList{
+  display: grid;
+  grid-template-areas: 
+  "CardCost CardName";
+
 }
 

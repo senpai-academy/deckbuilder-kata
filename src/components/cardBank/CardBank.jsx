@@ -6,15 +6,16 @@ import CardCost from "./cost/CardCost";
 const CardBank = (card)=>{
     return(
         <>
-            <main>
-                
-                <CardName
-                    name={card.name}
-                />
-                <CardCost 
-                    cost={card.cost}
-                />
-            </main>
+            <div className="cardBankContainer">
+                <div className="cardBankList">
+                    <CardName
+                        name={card.name}
+                    />
+                    <CardCost
+                        cost={card.cost}
+                    />
+                </div>
+            </div>
         </>
     )
 }
