@@ -3,13 +3,13 @@ import React from "react";
 
 
 
-const Panel = ({cards}) =>{
+const Panel = (props) =>{
     return (
         <div className={"Container Panel"}>
             {
-                cards.map(card=>{
+                props.cards.map((card,key)=>{
                     return (
-                        <div>
+                        <div key={key}>
                             <div className={"cost"}>{card.cost}</div>
                             <div>{card.name}</div>
                         </div>

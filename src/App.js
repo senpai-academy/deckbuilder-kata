@@ -2,16 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import { CardGenerator } from './Services/CardGenerator';
 import Panel from './components/panel';
-import { useState } from 'react';
+
 
 function App() {
-  /*const [cards,setCards] = useState([])
-  const builder = ()=>{
+  let cards = []
+
     for (let i=0;i<10;i++) {
     const card = new CardGenerator().generateCard(); 
-    setCards(card)
-  }}
-  console.log(cards)*/
+    cards.push(card)
+  }
+  console.log(cards)
   // const card = new CardGenerator().generateCard();
   
   
@@ -19,7 +19,7 @@ function App() {
 
     <div className="App">
         {/*<img src={`./Sprites/CardArt/${card.art}`}/> */}
-        <Panel></Panel>
+        <Panel cards={cards}></Panel>
     </div>
   );
 }
