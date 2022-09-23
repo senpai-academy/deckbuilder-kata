@@ -5,6 +5,10 @@
 body{
   background-color: black;
 }
+
+li {
+  margin-top: 0px;
+}
 #GridMain{
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -25,10 +29,43 @@ body{
 #CardBank{
   display: grid;
   grid-area: 1/2/2/3;
+  overflow-y: scroll;
 }
 
 
 #DeckInfo{
   display: grid;
   grid-area: 2/2/3/3;
+}
+
+.img-mana {
+  background-image: linear-gradient(violet), url("../public/Sprites/Icons/Mana.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.flex-between {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-center {
+  justify-self: center;
+}
+
+
+.text-bank {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 38px;
+  font-weight: bold;
+  color: #393939;
 }
