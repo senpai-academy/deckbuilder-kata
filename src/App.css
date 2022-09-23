@@ -1,9 +1,17 @@
+
 *{
-  background-color: black;
+  background-color: white;
 }
 
 main{
-  background-image: url("deckbuilder-kata/public/Sprites/Panels/Panel.png");
+  background-image: url("../public/Sprites/Panels/Panel.png");
   background-position: center;
   background-size: cover;
+  src: local('RINGM'),url("../public/RINGM___.TTF");
+  font-family: 'RINGM';
+  color: black;
+}
+
+h1{
+  color:black;
 }
