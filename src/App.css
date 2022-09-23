@@ -7,14 +7,16 @@
   pointer-events: none;
 }
 
+
 .Container{
-  max-width:1920vw;
-  max-height: 1080vh;
+  height: 100vh;
+  width: 100vw;
 }
 
 .Panel{
-  width: 100%;
-  height: 100%;
+
+  background-image: url(../public/Sprites/Panels/Panel.png);
+  background-size: cover;
 }
 
 
