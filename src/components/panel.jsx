@@ -3,9 +3,19 @@ import React from "react";
 
 
 
-const Panel = () =>{
+const Panel = ({cards}) =>{
     return (
         <div className={"Container Panel"}>
+            {
+                cards.map(card=>{
+                    return (
+                        <div>
+                            <div className="">{card.cost}</div>
+                            <div>{card.name}</div>
+                        </div>
+                    )
+                })
+            }
             
         </div>
     )
