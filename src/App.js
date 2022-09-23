@@ -5,7 +5,13 @@ import Panel from './components/panel';
 import { useState } from 'react';
 
 function App() {
-  const [cards,setCards] = useState([new CardGenerator().generateCard(),new CardGenerator().generateCard()])
+  /*const [cards,setCards] = useState([])
+  const builder = ()=>{
+    for (let i=0;i<10;i++) {
+    const card = new CardGenerator().generateCard(); 
+    setCards(card)
+  }}
+  console.log(cards)*/
   // const card = new CardGenerator().generateCard();
   
   
@@ -13,9 +19,10 @@ function App() {
 
     <div className="App">
         {/*<img src={`./Sprites/CardArt/${card.art}`}/> */}
-        <Panel cards={cards}></Panel>
+        <Panel></Panel>
     </div>
   );
 }
 
 export default App;
+
