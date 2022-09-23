@@ -1,28 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import { CardGenerator } from './Services/CardGenerator';
+import React from 'react';
+import CardBank from './COMPONENTS/Bank/CardBank';
 
 function App() {
 
-  const card = new CardGenerator().generateCard();
-  console.log(card)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <CardBank>
+        
+      </CardBank>
+    </React.Fragment>
   );
 }
 
