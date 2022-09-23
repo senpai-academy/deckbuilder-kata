@@ -4,12 +4,13 @@ import { CardGenerator } from './Services/CardGenerator';
 import React from 'react';
 import CardBank from './components/cardBank/CardBank';
 
-function App() {
+function App(){
  const card = new CardGenerator().generateCard();
- console.log(card)
+ console.log(card);
  return (
-  <React.Fragment>
-      <CardBank/>
-  <React.Fragment/>
-
+  <>
+  <CardBank/>
+  </>
+)
+}
 export default App;
