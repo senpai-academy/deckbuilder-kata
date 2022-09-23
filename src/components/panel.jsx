@@ -3,8 +3,8 @@ import React from "react";
 
 const Panel = () =>{
     return (
-        <div>
-            <img src={"./Sprites/Panels/Panel.png"}></img>
+        <div className={"Container"}>
+            <img className={"Panel"} src={"./Sprites/Panels/Panel.png"}></img>
         </div>
     )
 }
