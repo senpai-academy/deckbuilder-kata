@@ -1,17 +1,22 @@
 
-*{
-  background-color: white;
+html{
+  background-color: black;
+}
+
+@font-face {
+  font-family: RINGM;
+  src: url("../public/RINGM___.TTF");
 }
 
 main{
   background-image: url("../public/Sprites/Panels/Panel.png");
+  height: 50vh;
   background-position: center;
   background-size: cover;
-  src: local('RINGM'),url("../public/RINGM___.TTF");
   font-family: 'RINGM';
-  color: black;
+  color: white;
 }
 
 h1{
-  color:black;
+  color: white;
 }

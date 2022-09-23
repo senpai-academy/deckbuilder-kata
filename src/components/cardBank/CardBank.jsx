@@ -7,6 +7,7 @@ const CardBank = (card)=>{
     return(
         <>
         <main>
+            <p>hola</p>
             <CardName
                 name={card.name}
             />
