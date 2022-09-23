@@ -6,10 +6,8 @@ import { useEffect } from "react";
 
 const CardBank =()=>{
 
-    const [cardName, setCardName] = useState("")
-    const [cardCost, setCardCost] = useState("")
     const [cardList, setCardList] = useState([])
-
+    
     
 
     useEffect(()=>{
@@ -29,17 +27,17 @@ const CardBank =()=>{
         cost.push(cardList[i].cost)
     }
 
-    console.log(name)
-    console.log(cost)
-
-    function nameAndCost(
-        
-    )
 
     return(
         <ul>
-            <li></li>
+            {
+                cardList.map((card, key) => <SimpleCard
+                key={key}
+                name={card.name}
+                cost={card.cost}
+                />)
+            }
         </ul>
-    )
+    );
 }
 export default CardBank;
