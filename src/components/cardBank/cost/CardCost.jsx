@@ -3,8 +3,8 @@ import React from "react";
 const CardCost = (props) => {
     return(
         <>
-            <div id="cost">
-                {props.cost}
+            <div className="cardBankCost">
+                <img src="../public/Sprites/Icons/Mana.png" alt="" />
             </div>
         </>
     )

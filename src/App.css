@@ -19,11 +19,49 @@ html{
   font-family: 'RINGM';
   color: white;
 }
+/*
+.CardBankCost{
+  background-image: url("../public/Sprites/Icons/Mana.png");
+  background-size: cover;
+  height: 10vh;
+  width: 10vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'RINGM';
+}
+*/
+
+.CardBankCost > img{
+  height: 200px;
+  width: 200px;
+
+
+}
+
+
+.CBcostValue{
+font-family: 'RINGM';
+font-size: xx-large;
+}
+
+.CardName{
+  grid-area: CardName;
+  text-align: center;
+  color: #393939;
+}
+
+.CardCost{
+  grid-area: CardCost;
+  text-align: center;
+  color: #393939;
+  font-size: xx-large;
+}
 
 .cardBankList{
   display: grid;
   grid-template-areas: 
   "CardCost CardName";
+  padding:5%;
 
 }
 
