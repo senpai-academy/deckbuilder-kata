@@ -1,13 +1,99 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*@font-face {
+  font-family: 'Ringm';
+  src: url("/public/RINGM___.TTF"); /* Legacy iOS */
+
+
+body{
+  background-color: #000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  flex-wrap: wrap;
+}
+
+.panel{
+  background-image: url("/public/Sprites/Panels/Panel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #000;
+}
+
+.panel-right{
+  flex-basis: 39%;
+  align-self: flex-end;
+}
+
+.panel-left{
+  flex-basis: 60%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 40%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 2em;
+
+}
+
+.card-container{
+  background-image: url("/public/Sprites/Panels/BackgroundMedium.png");
+  background-size: cover;
+  min-width: 200px !important;
+  flex: 1;
+  padding: 10px;
+  align-items: center;
+}
+
+.card-container:hover{ /* Just for styling */
+  cursor: pointer;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+}
+
+.card-title{
+  background-image: url("/public/Sprites/Panels/Title.png");
+  background-size: cover;
+  width: 100%;
+  height: 50px !important;
+  position: relative;
+  margin-top: -25px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-title{
+  vertical-align: middle;
+  color: purple;
+}
+
+.text-title{
+  display: inline-block;
+  font-weight: bold;
+  font-size: large;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+}
+
+.card-img > img {
+  margin: 5px;
+  width: 90%;
+  border-radius: 2%;
+  object-fit: cover;
+}
+
+.card-details{
+  flex: 1;
+  background-image: url("/public/Sprites/Panels/Panel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
 }
