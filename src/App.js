@@ -2,24 +2,41 @@ import logo from './logo.svg';
 import './App.css';
 import { CardGenerator } from './Services/CardGenerator';
 import Panel from './components/panel';
+import { useEffect, useState } from 'react';
+import {CardsPanel} from './Cards/Cards';
 
 
 function App() {
-  let cards = []
+ /* let cards = []
 
     for (let i=0;i<10;i++) {
     const card = new CardGenerator().generateCard(); 
     cards.push(card)
   }
-  console.log(cards)
+  console.log(cards)*/
   // const card = new CardGenerator().generateCard();
   
-  
-  return (
+  const [state,setState] = useState({
+    cards: null,
+    selectedCard:null,
+  })
 
-    <div className="App">
-        {/*<img src={`./Sprites/CardArt/${card.art}`}/> */}
-        <Panel cards={cards}></Panel>
+  useEffect(()=>{
+    const cardsQuantity = 7;
+    let tempCards = []
+    for (let i = 0; i < cardsQuantity; i++) {
+      const card = new CardGenerator().generateCard()
+      tempCards.push(card);
+    }
+    setState({...state, cards: tempCards})
+    console.log(state.cards)
+  },[])
+
+  return (
+    <div className="container">
+      <CardsPanel
+      myCards={state.cards}/>
+      
     </div>
   );
 }
