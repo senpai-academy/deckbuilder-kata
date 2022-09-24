@@ -13,10 +13,49 @@ function App() {
         <div id="CardBank" className="backGround">
             <ul>
               <li className='flex-between fila-lista'>
-                  <div className='img-mana'>
-                      7 
+                  
+                  <div className='relative'>
+                    <span className='numero'> 6 </span>
+                    <div className='img-mana'></div>
                   </div>
+
+                  <span className='text-bank'> Fiery Mercenary </span>
+
+                  <div></div>
+              </li>
+              <li className='flex-between fila-lista'>
+                
+                  <div className='relative'>
+                    <span className='numero'> 1 </span>
+                    <div className='img-mana'></div>
+                  </div>
+
+                  <span className='text-bank'> Altered Goblin </span>
+
+                  <div></div>
+              </li>
+
+              <li className='flex-between fila-lista'>
+
+                  <div className='relative'>
+                    <span className='numero'> 7 </span>
+                    <div className='img-mana'></div>
+                  </div>
+
                   <span className='text-bank'> Fiery Bolt </span>
+
+                  <div></div>
+              </li>
+             
+              <li className='flex-between fila-lista'>
+                
+                  <div className='relative'>
+                    <span className='numero'> 1 </span>
+                    <div className='img-mana'></div>
+                  </div>
+
+                  <span className='text-bank'> Transformed Goblin Elemental </span>
+
                   <div></div>
               </li>
 

@@ -37,9 +37,24 @@ li {
   display: grid;
   grid-area: 2/2/3/3;
 }
+.relative {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.numero{
+  font-family: 'MedievalSharp', cursive;
+  font-size: 36px;
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  z-index: 2;
+}
 
 .img-mana {
-  background-image: linear-gradient(violet), url("../public/Sprites/Icons/Mana.png");
+  background-image: url("../public/Sprites/Icons/Mana.png");
+  filter: invert(69%) sepia(49%) saturate(7005%) hue-rotate(234deg) brightness(104%) contrast(104%);
   background-repeat: no-repeat;
   background-size: contain;
   width: 85px;
@@ -48,7 +63,7 @@ li {
   justify-content: center;
   align-items: center;
   font-size: 40px;
-  font-family: 'MedievalSharp', cursive;
+  
 }
 
 .flex-between {
