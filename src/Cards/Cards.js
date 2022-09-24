@@ -8,7 +8,7 @@ const CardsPanel = ({myCards}) => {
             {myCards.map((card, index) => (
                 <Card idx={index} data={card}></Card>            
             ))}
-        </div> : <Loading/>
+        </div>: <Loading/>
     )
 }
 const Card = ({idx, data}) => {
