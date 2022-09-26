@@ -12,7 +12,7 @@ const CardBank =()=>{
 
     useEffect(()=>{
         let cards = []
-        for(let i = 0; i<=49; i++){
+        for(let i = 0; i<=25; i++){
             const card = new CardGenerator().generateCard();
             cards.push(card)
         } 
@@ -29,7 +29,7 @@ const CardBank =()=>{
 
 
     return(
-        <ul className="bankContainer">
+        <ul>
             {
                 cardList.map((card, key) => <SimpleCard
                 key={key}

@@ -4,10 +4,12 @@ import mana from "../../assets/Icons/Mana.png"
 const SimpleCard = (props) =>{
     
     return(
-            <div>
-                <img className="mana" src={mana} alt="peque"/>
-                <span>{props.cost}</span>
-                <span>{props.name}</span>
+            <div className="simpleCard">
+                <div className="imgMana">
+                    <img className="mana" src={mana} alt="peque"/> 
+                    <span className="cost">{props.cost}</span>
+                </div>
+                <div className="cardName">{props.name}</div>
             </div>
     )
 }
