@@ -6,11 +6,17 @@ function App() {
 
   
   return (
-    <React.Fragment>
 
-      <CardBank/>   
+    <body>
 
-    </React.Fragment>
+      <div className='costName'>
+        <CardBank/>
+      </div>
+
+         
+
+    </body>
+
   );
 }
 

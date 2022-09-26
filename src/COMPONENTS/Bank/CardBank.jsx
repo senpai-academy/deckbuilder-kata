@@ -29,7 +29,7 @@ const CardBank =()=>{
 
 
     return(
-        <ul>
+        <ul className="bankContainer">
             {
                 cardList.map((card, key) => <SimpleCard
                 key={key}
