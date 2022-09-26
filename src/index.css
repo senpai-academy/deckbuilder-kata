@@ -8,6 +8,8 @@ body{
 }
 
 .container{
+  height: 1920px;
+  width: 1080px;
   display: flex;
   flex-direction: row;
   gap: 1%;
@@ -22,8 +24,12 @@ body{
 }
 
 .panel-right{
+  height: 40%;
+  width: 40%;
   flex-basis: 39%;
-  align-self: flex-end;
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
 }
 
 .panel-left{
@@ -90,6 +96,15 @@ body{
 
 .card-details{
   flex: 1;
+  background-image: url("/public/Sprites/Panels/Panel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-background{
   background-image: url("/public/Sprites/Panels/Panel.png");
   background-repeat: no-repeat;
   background-size: cover;

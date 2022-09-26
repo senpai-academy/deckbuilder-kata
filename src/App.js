@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { CardGenerator } from './Services/CardGenerator';
-import Panel from './components/panel';
+import Panel from './components/Panel';
 import { useEffect, useState } from 'react';
 import {CardsPanel} from './Cards/Cards';
+import Main from './components/Main';
 
 
 function App() {
  /* let cards = []
-
     for (let i=0;i<10;i++) {
     const card = new CardGenerator().generateCard(); 
     cards.push(card)
@@ -33,11 +33,14 @@ function App() {
   },[])
 
   return (
+    <>
     <div className="container">
       <CardsPanel
       myCards={state.cards}/>
-      
+      <Main/>
     </div>
+    
+    </>
   );
 }
 
