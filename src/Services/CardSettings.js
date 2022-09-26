@@ -26,7 +26,7 @@ export class CardSettings{
     randomArt = () => ["arranca.jpg","bicho.jpeg","blizzard.png",
                         "coso.jpg","elem.jpg","enano.jpg","fire.jpg",
                         "fire2.jpg","ghostrider.jpg","golem.jpg","mago.jpg",
-                        "rayo.jpg","rayo2.jpg","tigre.jpeg","vamp.jpg"][getRandomInt(0,16)]
+                        "rayo.jpg","rayo2.jpg","tigre.jpeg","vamp.jpg"][getRandomInt(0,15)]
     randomRarity = () => this.rarities[getRandomInt(0,3)]
     randomName = () => `${this.adjetives[getRandomInt(0,10)]} ${this.nouns[getRandomInt(0,10)]}`
     randomRarity = () => this.rarities[getRandomInt(0,3)];
