@@ -11,57 +11,64 @@ html{
 
 .cardBankContainer{
   background-image: url("../public/Sprites/Panels/Panel.png");
-  background-size:contain;
-  background-position: center;
-  height: 95vh;
+  background-size:cover;
+  height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   font-family: 'RINGM';
   color: white;
+  overflow-y: scroll;
 }
-/*
-.CardBankCost{
+
+.cardBankCost{
+  display: grid;
   background-image: url("../public/Sprites/Icons/Mana.png");
   background-size: cover;
-  height: 10vh;
-  width: 10vh;
-  background-position: center;
+  height: 150px;
+  width: 150px;
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: 'RINGM';
-}
-*/
-
-.CardBankCost > img{
-  height: 200px;
-  width: 200px;
-
-
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }
 
+.cardBankCost > span {
+  font-size: 50px;
+  color: black;  
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 
 .CBcostValue{
 font-family: 'RINGM';
 font-size: xx-large;
+
 }
 
 .CardName{
-  grid-area: CardName;
   text-align: center;
   color: #393939;
+  grid-column: 2/3;
+  font-size: xx-large;
 }
 
 .CardCost{
-  grid-area: CardCost;
   text-align: center;
   color: #393939;
   font-size: xx-large;
+  
 }
 
 .cardBankList{
   display: grid;
-  grid-template-areas: 
-  "CardCost CardName";
-  padding:5%;
+  grid-template-columns: 1fr 9fr;
+  padding:10%;
 
 }
 

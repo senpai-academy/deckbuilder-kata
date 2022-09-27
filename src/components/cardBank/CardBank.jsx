@@ -1,19 +1,28 @@
 import React from "react";
-import { Card } from "../../Services/Card";
 import CardName from "./name/CardName";
 import CardCost from "./cost/CardCost";
 
-const CardBank = (card)=>{
+const CardBank = (props)=>{
     return(
         <>
             <div className="cardBankContainer">
                 <div className="cardBankList">
-                    <CardName
-                        name={card.name}
-                    />
-                    <CardCost
-                        cost={card.cost}
-                    />
+                    {props.Cardlist.map((Card,key) => {
+                    return(
+                        <React.Fragment key={key}>
+                            
+                            <div >
+                                <CardCost cost={Card.cost}/>
+                            </div>
+
+                            <div >
+                                <CardName name={Card.name}/>
+                            </div>  
+                            
+                        </React.Fragment>
+                    )
+                })}
+                   
                 </div>
             </div>
         </>
