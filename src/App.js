@@ -5,6 +5,7 @@ import { CardGenerator } from './Services/CardGenerator';
 import { useEffect, useState } from 'react';
 import {CardsPanel} from './Cards/Cards';
 import {CardBank} from './components/cardBank'
+import Modal from "./components/modal"
 
 
 function App() {
@@ -35,10 +36,8 @@ function App() {
 
   return (
     <div id="GridMain">
-    
         <div id="DeckGrid" className="backGround">
-          {(!state.selectedCard)?"No hay carta":<Modal card={state.selectedCard} />}
-
+        {(!state.selectedCard) ? "No hay carta" : <Modal card={state.selectedCard} />}
         </div>
         <div id="CardBank" className="backGround">
               <CardBank
