@@ -7,6 +7,7 @@ body{
   background-color: #000;
   height: 100vh;
   width: 100vw;
+  font-family:'RINGM';
 }
 
 .container{
@@ -32,8 +33,6 @@ body{
   grid-column: 2/3;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 20% 80%;
   display: flex;
   
 }
@@ -123,15 +122,16 @@ body{
   list-style-type:none;
   display: flex;
   flex-direction: column;
-  grid-column: 2/3;
 }
-.card-list > li > span{
+#costCard{
 background-image:url("/public/Sprites/Icons/Mana.png");
 background-repeat: no-repeat;
 background-size: cover;
 width: 50px;
 height: 50px;
-grid-column: 1/2;
+}
+
+#cardName{
 }
 .card-list > li{
   display: flex;
