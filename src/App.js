@@ -7,7 +7,7 @@ import React from 'react';
 function App  ()  {
   let cards = []
 
-  for (let i = 0; i < 27; i++) {
+  for (let i = 0; i < 3; i++) {
     const card = new CardGenerator().generateCard();
     cards.push(card)
   }
@@ -16,12 +16,7 @@ function App  ()  {
 
  return (
   <>
-  <div className='contenedor'>
-  <div className='Cartas'>
-    
-  </div>
   <CardBank Cardlist={cards}/>
-  </div>
   </>
 )
 }
