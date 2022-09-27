@@ -80,5 +80,8 @@ font-size: xx-large;
   "cartas info";
 }
 
+#PopUpContainer{
+  background-image: url("../public/Sprites/Panels/BackgroundLarge.png");
+}
 
 

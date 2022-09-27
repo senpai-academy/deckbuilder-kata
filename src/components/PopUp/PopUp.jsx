@@ -5,9 +5,9 @@ import CardName from "../cardBank/name/CardName";
 
 const PopUp=(props)=>{
     return(
-        <React.Fragment>
+        <div id="PopUpContainer">
             <div> 
-                <div >
+                <div>
                     <CardCost cost={props.card.cost}/>
                 </div>
 
@@ -30,7 +30,7 @@ const PopUp=(props)=>{
                 <div></div>
             </div>
 
-        </React.Fragment>
+        </div>
     )
 }
 export default PopUp;
