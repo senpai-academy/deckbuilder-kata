@@ -3,7 +3,7 @@ import SimpleCard from "./SimpleCard"
 
 const CardBank =(props)=>{
 
-    props.showPopup(
+    /*props.showPopup(
         takePopup()
     )
     
@@ -11,14 +11,14 @@ const CardBank =(props)=>{
         return () => {
             console.log("CARD BANK");
         };
-    }
+    }*/
     return(
         <ul>
             {
-                props.card.map((card, key) => <SimpleCard
-                key={key}
+                props.card.map((card, index) => <SimpleCard
                 card={card}
-                takePopup={takePopup}
+                key={`${card.name}-${card.cost}`}
+                /*takePopup={takePopup}*/
                 />)
             }
         </ul>

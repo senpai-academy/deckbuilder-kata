@@ -3,7 +3,7 @@ import mana from "../../assets/Icons/Mana.png"
 
 const SimpleCard = (props) =>{
     
-    props.takePopup (
+    /*props.takePopup (
         console.log("POPUP"),
         popup()
         
@@ -13,10 +13,20 @@ const SimpleCard = (props) =>{
         return () => {
                 console.log(props)          
         }
-    }
+    }*/
+
+    /*function showKey() {
+        console.log(props)
+    }*/
+
+    const showKey = (e) => {
+          e.preventDefault();
+          console.log(props.card);
+        }
+    
 
     return(
-            <div className="simpleCard" onClick={props.takePopup}>
+            <div className="simpleCard" onClick={showKey}>
                 <div className="imgMana">
                     <img className="mana" src={mana} alt="peque"/> 
                     <span className="cost">{props.card.cost}</span>

@@ -22,9 +22,10 @@ function App(props) {
         setCardList(cards)
       },[])
   
-  const showPopup = ()=>{
+  /*const showPopup = ()=>{
     console.log("APP")
-  }
+  }*/
+
 
   return (
 
@@ -33,7 +34,7 @@ function App(props) {
       <div className='costName'>
         <CardBank
         card={cardList}
-        showPopup={showPopup}/>
+        /*showPopup={showPopup}*//>
       </div>
       <div className='modalContainer'>
         <CardPopup/>
