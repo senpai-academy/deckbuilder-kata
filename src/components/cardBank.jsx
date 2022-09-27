@@ -1,20 +1,18 @@
-import React from "react";
 import { Loading } from "../components/Lib"
-import Popup from "../components/popup"
 
-const CardBank = ({myCards}) => {
+const CardBank = ({myCards, select}) => {
     return (
         (myCards) ?
         <ul>
             {myCards.map((card, index) => (
-                <Card idx={index} data={card}></Card>            
+                <Card idx={index} data={card} select={select}></Card>            
             ))}
         </ul>: <Loading/>
     )
 }
-const Card = ({idx, data}) => {
+const Card = ({idx,data,select}) => {
     return (
-        <li className="flex-between fila-lista pointer" onClick={() =>Openpopup(data)} >
+        <li className="flex-between fila-lista pointer" onClick={() => select(idx)} >
                 <div className='relative'>
                     <span className='numero'>{data.cost}</span>
                     <div className='img-mana'></div>
@@ -25,10 +23,5 @@ const Card = ({idx, data}) => {
     )
 }
 
-function Openpopup(data){
-    return(
-        <Popup/>
-    )
-}
 
 export {CardBank,Card} 
