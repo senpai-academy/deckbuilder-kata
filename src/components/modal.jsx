@@ -1,11 +1,28 @@
 import React from "react";
 import { Loading } from "./Lib";
-const Modal = ({card}) =>{
-    console.log({card})
+const Modal = ({data}) =>{
+    console.log({data})
     return (
        
          <div id="modal">
-                <span> HOLA </span>
+                <div className="card-containerModal">
+                    <div className="card-title">
+                        <img alt="fire" className="icon-title" height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} /> <span className="text-title">{data.name}</span>
+                    </div>
+                    <div className="card-img">
+                        <img src={`/Sprites/CardArt/${data.art}`} alt={data.name}/>
+                    </div>
+                    <div className="div-carddetails">
+                        <div className="card-details">
+                            <spam className="description-Card">{data.description}</spam>
+                        </div>
+                        <div className="card-details">
+                            <img alt="a" className="icon-details" height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} />
+                            <span><img alt="b" className="icon-details" height={'30px'} src={`/Sprites/Icons/Attack.png`} />{data.attackScore}</span>
+                            <span><img alt="c" className="icon-details" height={'30px'} src={`/Sprites/Icons/Defense.png`} />{data.defenseScore}</span>
+                        </div>
+                    </div>
+                </div>
          </div>
     )
 }

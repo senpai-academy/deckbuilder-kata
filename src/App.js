@@ -34,10 +34,13 @@ function App() {
     setState({...state, selectedCard: state.cards[id]})
   }
 
+
+
   return (
     <div id="GridMain">
+      {(!state.selectedCard) ? "No hay carta" : <Modal data={state.selectedCard} />}
         <div id="DeckGrid" className="backGround">
-        {(!state.selectedCard) ? "No hay carta" : <Modal card={state.selectedCard} />}
+        
         </div>
         <div id="CardBank" className="backGround">
               <CardBank
