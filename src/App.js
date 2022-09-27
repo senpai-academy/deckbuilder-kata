@@ -16,7 +16,12 @@ function App  ()  {
 
  return (
   <>
+  <div className='contenedor'>
+  <div className='Cartas'>
+    
+  </div>
   <CardBank Cardlist={cards}/>
+  </div>
   </>
 )
 }

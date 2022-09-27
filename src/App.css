@@ -18,6 +18,7 @@ html{
   font-family: 'RINGM';
   color: white;
   overflow-y: scroll;
+  grid-area: banco;
 }
 
 .cardBankCost{
@@ -70,5 +71,12 @@ font-size: xx-large;
   grid-template-columns: 1fr 9fr;
   padding:10%;
 
+}
+
+.contenedor{
+  display: grid;
+  grid-template-areas: 
+  "cartas banco"
+  "cartas info";
 }
 
