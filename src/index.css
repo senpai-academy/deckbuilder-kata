@@ -5,6 +5,8 @@
 
 body{
   background-color: #000;
+  height: 100vh;
+  width: 100vw;
 }
 
 .container{
@@ -21,17 +23,20 @@ body{
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #000;
+  display: flex;
+  
 }
 
 .panel-right{
-  flex-basis: 39%;
-  display: flex;
-  align-self: flex-start;
+  height: 800px;
+  width: 600px;
+  
   justify-content: space-between;
+  
 }
 
 .panel-left{
-  flex-basis: 60%;
+  
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 40%;
@@ -111,3 +116,22 @@ body{
   justify-content: space-around;
 }
 
+.card-list{
+  list-style-type:none;
+  display: flex;
+  flex-direction: column;
+}
+.card-list > li > span{
+background-image:url("/public/Sprites/Icons/Mana.png");
+background-repeat: no-repeat;
+background-size: cover;
+width: 60px;
+height: 60px;
+display: flex;
+justify-content: flex-start;
+}
+.card-list > li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
