@@ -1,14 +1,31 @@
 import React from "react";
+import { Loading } from "../components/Lib"
 
-const Main = ({props}) => {
+const CardList = ({myCards}) =>{
+    return (
+        (myCards) ?
+        <div className="panel panel-right">
+            {myCards.map((card, index) => (
+                <Card idx={index} data={card}></Card>            
+            ))}
+        </div>: <Loading/>
+    )
+}
+
+
+
+
+const Card = (props) => {
     return(
         <div className="panel panel-right"> 
         <div>
-            <div classNamw="card-cost">
-                cost
+            <div className="card-cost">
+                <img src={`/Sprites/Icons/Mana.png`}/>
+                <span>{props.data.cost}</span>
+                
             </div>
-            <div classNamw="card-name">
-                name
+            <div className="card-name">
+                <span>{props.data.name}</span>
             </div>
         </div>
 
@@ -16,4 +33,4 @@ const Main = ({props}) => {
     )
 }
 
-export default Main;
+export  {CardList,Card};
