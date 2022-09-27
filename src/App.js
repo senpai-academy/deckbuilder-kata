@@ -30,8 +30,11 @@ function App  ()  {
       selectedCard != null &&  <PopUp card={selectedCard}/>
     }
   
- // <CardBank Cardlist={cards}/>
+ 
   </div>
 )
 }
 export default App;
+
+
+/*<CardBank Cardlist={cards}/>*/ 

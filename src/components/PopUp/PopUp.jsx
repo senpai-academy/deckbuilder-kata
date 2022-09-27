@@ -5,32 +5,35 @@ import CardName from "../cardBank/name/CardName";
 
 const PopUp=(props)=>{
     return(
-        <div id="PopUpContainer">
-            <div> 
+        <div id="modal">
+            <div id="PopUpContainer">
                 <div>
-                    <CardCost cost={props.card.cost}/>
+                    <div>
+                        <CardCost cost={props.card.cost} />
+                    </div>
+
+                    <div >
+                        <CardName name={props.card.name} />
+                    </div>
                 </div>
 
-                <div >
-                    <CardName name={props.card.name}/>
-                </div> 
+                <div>
+
+                </div>
+
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
+
             </div>
-
-            <div>
-
-            </div>
-
-            <div>
-                <div></div>
-                <div></div>
-            </div>
-
-            <div>
-                <div></div>
-                <div></div>
-            </div>
-
         </div>
+     
     )
 }
 export default PopUp;
