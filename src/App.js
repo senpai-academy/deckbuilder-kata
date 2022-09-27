@@ -12,7 +12,7 @@ function App() {
   const [state,setState] = useState({
     cards: null,
     selectedCard:null,
-    myCards:null
+    myCards:null,
   })
 
   useEffect(()=>{
@@ -34,17 +34,11 @@ function App() {
   }
 
   return (
-
-
     <div id="GridMain">
-      
-        
+    
         <div id="DeckGrid" className="backGround">
-          {state.selectedCard.name}
-            {/* 
-             <CardsPanel
-              myCards={state.selectedCard}/>
-             */}
+          {(!state.selectedCard)?"No hay carta":<Modal card={state.selectedCard} />}
+
         </div>
         <div id="CardBank" className="backGround">
               <CardBank
