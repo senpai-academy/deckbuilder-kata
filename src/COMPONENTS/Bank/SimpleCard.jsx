@@ -23,7 +23,7 @@ const SimpleCard = (props) =>{
           e.preventDefault();
           console.log(props.card);
         }
-    
+    puto
 
     return(
             <div className="simpleCard" onClick={showKey}>
