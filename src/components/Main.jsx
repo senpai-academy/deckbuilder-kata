@@ -18,8 +18,8 @@ const CardList = ({ myCards }) => {
 const Card = (props) => {
   return (
     <li>
-      <span>{props.data.cost}</span>
-      {props.data.name}
+      <span id="costCard">{props.data.cost}</span>
+      <span id="nameCard">{props.data.name}</span>
     </li>
     /*
         <div className="panel panel-right"> 
