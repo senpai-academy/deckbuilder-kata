@@ -43,11 +43,24 @@ body{
   width: 100%;
   height: 100%;
   background-image: url("../public/Sprites/Panels/Panel.png");
-  overflow: scroll;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover; 
-  overflow-x: hidden;
+  object-fit: cover;
+  overflow-y: scroll; 
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.costName::-webkit-scrollbar {
+  display: none;
+}
+
+.modal{
+  display: block;
+  height: 50vh;
+  width: 50vh;
+  color: white;
+  font-size: 50px;
 }
 
 
