@@ -5,12 +5,14 @@ import { CardGenerator } from './Services/CardGenerator';
 import { useEffect, useState } from 'react';
 import {CardsPanel} from './Cards/Cards';
 import {CardBank} from './components/cardBank'
+import Popup from './components/popup';
 
 function App() {
 
   const [state,setState] = useState({
     cards: null,
     selectedCard:null,
+    modal:null,
   })
 
   useEffect(()=>{
@@ -29,10 +31,12 @@ function App() {
 
 
     <div id="GridMain">
+      
+        <Popup estado={state.modal}/>
         <div id="DeckGrid" className="backGround">
             
              <CardsPanel
-              myCards={state.cards}/>
+              myCards={state.selectedCard}/>
   
         </div>
         <div id="CardBank" className="backGround">

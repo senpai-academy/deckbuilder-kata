@@ -1,13 +1,12 @@
-import { Loading } from "../components/Lib"
 
 const CardsPanel = ({myCards}) => {
     return (
-        (myCards) ?
+        
         <div className="panel panel-left">
             {myCards.map((card, index) => (
                 <Card idx={index} data={card}></Card>            
             ))}
-        </div>: <Loading/>
+        </div>
     )
 }
 const Card = ({idx, data}) => {

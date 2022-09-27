@@ -1,4 +1,6 @@
+import React from "react";
 import { Loading } from "../components/Lib"
+import Popup from "../components/popup"
 
 const CardBank = ({myCards}) => {
     return (
@@ -12,7 +14,7 @@ const CardBank = ({myCards}) => {
 }
 const Card = ({idx, data}) => {
     return (
-        <li className="flex-between fila-lista">
+        <li className="flex-between fila-lista pointer" onClick={() =>Openpopup(data)} >
                 <div className='relative'>
                     <span className='numero'>{data.cost}</span>
                     <div className='img-mana'></div>
@@ -22,4 +24,11 @@ const Card = ({idx, data}) => {
         </li>
     )
 }
+
+function Openpopup(data){
+    return(
+        <Popup/>
+    )
+}
+
 export {CardBank,Card} 
