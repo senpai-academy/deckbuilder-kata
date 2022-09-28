@@ -19,7 +19,7 @@ function App() {
   });
 
   useEffect(() => {
-    const cardsQuantity = 30;
+    const cardsQuantity = 35;
     let tempCards = [];
     for (let i = 0; i < cardsQuantity; i++) {
       const card = new CardGenerator().generateCard();

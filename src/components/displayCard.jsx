@@ -1,19 +1,8 @@
-import { Loading } from "../components/Lib"
+import React from "react";
 
-const CardsPanel = ({myCards}) => {
-
-    return (
-        (myCards) ?
-        <div className="panel panel-left">
-            {myCards.map((card, index) => (
-             <></>         
-            ))}
-        </div>: <Loading/>
-    )
-}
-const Card = ({idx, data}) => {
-    return (
-        <div className="card-container">
+const Modal = () => {
+    return(
+        <div className="card-container-modal">
             <div className="card-title">
                 <img alt="fire" className="icon-title" height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} /> <span className="text-title">{data.name}</span>
             </div>
@@ -29,4 +18,9 @@ const Card = ({idx, data}) => {
     )
 }
 
-export {CardsPanel,Card} 
+export default Modal;
+
+
+
+
+
