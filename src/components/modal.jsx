@@ -25,6 +25,11 @@ const Modal = ({data}) =>{
                             <span><img alt="c" className="icon-details" height={'30px'} src={`/Sprites/Icons/Defense.png`} />{data.defenseScore}</span>
                         </div>
                     </div>
+                    <div className="button-footer">
+                        <div className="acepta-carta" img src="../Sprites/Panels/Button.png"/>
+                            AAA
+                        <div className="rechaza-carta" img src="../Sprites/Panels/Button.png"/>
+                    </div>
                 </div>
          </div>
     )
