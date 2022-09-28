@@ -7,7 +7,11 @@ const Modal = ({data}) =>{
          <div id="modal">
                 <div className="card-containerModal">
                     <div className="card-title">
-                        <img alt="fire" className="icon-title" height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} /> <span className="text-title">{data.name}</span>
+                        <div className='relative'>
+                            <span className='numero'>{data.cost}</span>
+                            <div className='img-mana'></div>
+                        </div>   
+                        <span className="text-title">{data.name}</span>
                     </div>
                     <div className="card-img">
                         <img src={`/Sprites/CardArt/${data.art}`} alt={data.name}/>
