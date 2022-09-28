@@ -10,7 +10,8 @@ import { CardGenerator } from './Services/CardGenerator';
 function App(props) {
 
   const [cardList, setCardList] = useState([])
-    
+  const [cardToShow, setCardToShow] = useState(null)
+
     
 
     useEffect(()=>{
@@ -22,9 +23,6 @@ function App(props) {
         setCardList(cards)
       },[])
   
-  /*const showPopup = ()=>{
-    console.log("APP")
-  }*/
 
 
   return (
@@ -34,10 +32,13 @@ function App(props) {
       <div className='costName'>
         <CardBank
         card={cardList}
-        /*showPopup={showPopup}*//>
+        selectCard={setCardToShow}/>
       </div>
       <div className='modalContainer'>
-        <CardPopup/>
+        {
+          cardToShow != null && <CardPopup card={cardToShow}/>
+        }
+        
       </div>
 
     </body>
