@@ -1,3 +1,10 @@
+@font-face {        
+  font-family: RINGM;
+  src: url("../public/RINGM___.TTF");
+} 
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -49,7 +56,7 @@ li {
 }
 
 .numero{
-  font-family: 'MedievalSharp', cursive;
+  font-family: 'RINGM';
   font-size: 36px;
   position: absolute;
   top: 30px;
@@ -84,7 +91,7 @@ li {
 
 
 .text-bank {
-  font-family: 'MedievalSharp', cursive;
+  font-family: 'RINGM';
   font-size: 38px;
   font-weight: bold;
   color: #393939;
@@ -92,6 +99,7 @@ li {
 
 body{
   background-color: #000;
+  font-family:'RINGM';
 }
 
 .container{
