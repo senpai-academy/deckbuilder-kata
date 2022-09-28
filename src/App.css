@@ -9,6 +9,11 @@ html{
   src: url("../public/RINGM___.TTF");
 }
 
+body{
+    font-family: 'RINGM';
+    color: #393939;
+    font-size: xx-large;
+}
 
 .cardBankContainer{
   background-image: url("../public/Sprites/Panels/Panel.png");
@@ -39,11 +44,6 @@ html{
   font-size: 3em;
 }
 
-.CBcostValue{
-font-family: 'RINGM';
-font-size: xx-large;
-
-}
 
 .CardName{
   text-align: center;
@@ -78,18 +78,9 @@ font-size: xx-large;
 
 }
 
-#PopUpContainer{
-  background-image: url("../public/Sprites/Panels/BackgroundLarge.png");
-  background-size:  100% 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
-  width: 40vw;
-  height: 80vh;
-
-}
 
 
+/*----------POP UP------------*/
 #modal{
   display: flex;
   justify-content: center;
@@ -98,7 +89,7 @@ font-size: xx-large;
   height: 100vh;
 }
 
-.namecost{
+.namecost{  /*Clase del PopUp*/
   justify-items: center;
   align-items: center;
   display: grid;
@@ -111,6 +102,36 @@ font-size: xx-large;
   
 }
 
-.namecost > p {
- max-height: 10px;
+#PopUpContainer {
+  background-image: url("../public/Sprites/Panels/BackgroundLarge.png");
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  width: 40vw;
+  height: 80vh;
+
+}
+
+.PopUpName {
+  text-align: center;
+  grid-column: 2/3;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.PopUpCost {
+  display: grid;
+  background-image: url("../public/Sprites/Icons/Mana.png");
+  height: 100%;
+  width: 60%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    text-align: center;
+      color: #393939;
+      font-size: xx-large;
+      font-weight: bold;
 }

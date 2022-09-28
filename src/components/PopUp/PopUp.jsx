@@ -7,9 +7,9 @@ const PopUp=(props)=>{
     return(
             <div id="PopUpContainer">
                 <div className="namecost">
-                        <CardCost cost={props.card.cost} />
+                        <CardCost cost={props.card.cost} className="PopUpCost"/>
                     
-                        <CardName name={props.card.name} />
+                        <CardName name={props.card.name} className="PopUpName"/>
                 </div>
 
                 <div>

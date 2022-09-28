@@ -2,7 +2,7 @@ import React from "react";
 
 const CardCost = (props) => {
     return(
-            <div className="cardBankCost"> 
+            <div className={props.className}> 
                 {props.cost}
             </div>
     )
