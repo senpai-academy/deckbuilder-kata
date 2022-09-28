@@ -15,7 +15,7 @@ body{
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 1fr;
   gap: 1%;
  
 }
@@ -23,8 +23,9 @@ body{
 .panel{
   background-image: url("/public/Sprites/Panels/Panel.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-color: #000;
+  
   
   
   
@@ -32,9 +33,12 @@ body{
 
 .panel-right{
   grid-column: 2/3;
-  height: 100%;
+  height: 30%;
   width: 100%;
   display: flex;
+  justify-content: space-around;
+
+
   
 }
 
@@ -123,9 +127,23 @@ body{
   list-style-type:none;
   display: flex;
   flex-direction: column;
+  flex-wrap:nowrap;
+  overflow: auto;
+  height: 90%;
+  width: 70%;
   
- 
+
+
 }
+
+
+
+
+
+
+    
+ 
+
 #costCard{
 background-image:url("/public/Sprites/Icons/Mana.png");
 background-repeat: no-repeat;
