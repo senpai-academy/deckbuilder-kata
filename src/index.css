@@ -4,7 +4,7 @@
 }
 
 
-body{
+html{
   background-color: #000;
   height: 100vh;
   width: 100vw;
@@ -15,7 +15,7 @@ body{
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 1%;
  
 }
@@ -25,25 +25,17 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #000;
-  
-  
-  
-  
 }
 
 .panel-right{
   grid-column: 2/3;
-  height: 30%;
+  height: 300px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-
-
-  
+  justify-content: space-around; 
 }
 
 .panel-left{
-  
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 40%;
@@ -58,7 +50,7 @@ body{
 .card-container{
   background-image: url("/public/Sprites/Panels/BackgroundMedium.png");
   background-size: cover;
-  min-width: 200px !important;
+  min-width: 120px !important;
   flex: 1;
   padding: 10px;
   align-items: center;
@@ -130,23 +122,13 @@ body{
   flex-wrap:nowrap;
   overflow: auto;
   height: 90%;
-  width: 70%;
-  
-  
-
+  width: 350px;
 
 }
 
 .card-list::-webkit-scrollbar{
   display: none;
 }
-
-
-
-
-
-    
- 
 
 #costCard{
 background-image:url("/public/Sprites/Icons/Mana.png");
@@ -158,6 +140,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: xx-large;
+/*filter: HSL(303°,85.8%,27.6%);*/
 
 }
 
