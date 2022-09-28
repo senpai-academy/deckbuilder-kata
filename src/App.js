@@ -41,6 +41,14 @@ function App(props) {
         
       </div>
 
+      <div className='deck'>
+        <img src={"Sprites/Panels/panel.png"}></img>
+      </div>
+
+      <div className='deckInfo'>
+        <img src={"Sprites/Panels/panel.png"}></img>
+      </div>
+
     </body>
 
   );

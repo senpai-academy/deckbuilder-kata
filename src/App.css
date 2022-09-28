@@ -101,3 +101,10 @@ body{
   height: 50%;
 }
 
+.deck{
+  grid-area: desk;
+}
+
+.deckInfo{
+  grid-area: icons;
+}
