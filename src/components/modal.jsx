@@ -26,9 +26,8 @@ const Modal = ({data}) =>{
                         </div>
                     </div>
                     <div className="button-footer">
-                        <div className="acepta-carta" img src="../Sprites/Panels/Button.png"/>
-                            AAA
-                        <div className="rechaza-carta" img src="../Sprites/Panels/Button.png"/>
+                        <div className="aceptar-carta" img src="/Sprites/Panels/Button.png"/>
+                        <div className="rechazar-carta" img src="/Sprites/Panels/Button.png"/>
                     </div>
                 </div>
          </div>

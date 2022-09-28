@@ -22,6 +22,12 @@ li {
   gap: 20px;
 }
 
+.description-Card{
+  overflow: scroll;
+  height: 70px;
+
+}
+
 .backGround{
   background-image: url('../public/Sprites/Panels/Panel.png');
   background-repeat: no-repeat;
@@ -136,6 +142,7 @@ body{
   padding: 10px;
   margin: 10px;
   align-items: center;
+  background-repeat: no-repeat;
 }
 
 .pointer{
@@ -177,7 +184,7 @@ body{
 
 .card-img > img {
   margin: 5px;
-  width: 70%;
+  width: 60%;
   object-fit: cover;
 }
 
@@ -227,4 +234,27 @@ body{
   display: flex;
   justify-self: center;
   gap: 20px;
+  margin: 10px;
+  align-content: space-around;
+} 
+
+.rechazar-carta {
+  max-height: 100%;
+  height: 100px;
+  width: 75px;
+  background-size: contain;
+  background-image: url(../public/Sprites/Panels/Button.png);
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(2);
+  filter: grayscale(1);
 }
+
+.aceptar-carta {
+  max-height: 100%;
+  height: 80px;
+  width: 75px;
+  background-size: contain;
+  background-image: url(../public/Sprites/Panels/Button.png);
+  background-repeat: no-repeat;
+}
+
