@@ -4,6 +4,7 @@ const Modal = ({data}) =>{
     console.log({data})
     return (
          <div id="modal">
+            <div className="modalBox">
                 <div className="card-container-modal">
                     <div className="card-title">
                         <div className='relative'>
@@ -20,7 +21,7 @@ const Modal = ({data}) =>{
                             <span className="description-Card">{data.description}</span>
                         </div>
                         <div className="card-details">
-                            <img alt="a" className="icon-details" height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} />
+                            <img alt="a" className={"icon-details "+(data.rarity.value)} height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} />
                             <span><img alt="b" className="icon-details" height={'30px'} src={`/Sprites/Icons/Attack.png`} />{data.attackScore}</span>
                             <span><img alt="c" className="icon-details" height={'30px'} src={`/Sprites/Icons/Defense.png`} />{data.defenseScore}</span>
                         </div>
@@ -30,6 +31,7 @@ const Modal = ({data}) =>{
                         <div className="rechazar-carta" img src="/Sprites/Panels/Button.png"/>
                     </div>
                 </div>
+            </div>
          </div>
     )
 }
