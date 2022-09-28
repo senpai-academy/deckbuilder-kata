@@ -15,7 +15,7 @@ li {
 }
 #GridMain{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
   grid-template-rows: 2fr 1fr;  
   height: 100vh;
   width: 100vw;
@@ -24,8 +24,7 @@ li {
 
 .description-Card{
   overflow: scroll;
-  height: 70px;
-
+  height: 100px;
 }
 
 .backGround{
@@ -134,14 +133,14 @@ body{
 }
 
 .card-container{
-  background-image: url("/public/Sprites/Panels/BackgroundMedium.png");
-  background-size: cover;
   min-width: 200px !important;
   height: 400px;
   flex: 1;
   padding: 10px;
   margin: 10px;
+  background-image: url("/public/Sprites/Panels/BackgroundMedium.png");
   align-items: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -210,24 +209,28 @@ body{
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 100;
+  height: 100vh;
+  z-index: 10;
   background: rgba(0,0,0,0.8);
   display: grid;
   justify-items: center;
   align-items: center;
   pointer-events: none;
   transition: max-height 500ms;
-  height: 100vh;
   overflow-y: hidden;
   overflow: hidden;
 }
-.card-containerModal{
+.card-container-modal{
+  padding: 10px;
   display: grid;
   justify-items: center;
   align-items: center;
-  width: 30%;
+  width: 400px;
   background-image: url(../public/Sprites/Panels/BackgroundMedium.png);
   background-repeat: cover;
+}
+.div-card-details{
+  padding: 10px;
 }
 
 .button-footer {
@@ -239,7 +242,6 @@ body{
 } 
 
 .rechazar-carta {
-  max-height: 100%;
   height: 100px;
   width: 75px;
   background-size: contain;
@@ -250,7 +252,6 @@ body{
 }
 
 .aceptar-carta {
-  max-height: 100%;
   height: 80px;
   width: 75px;
   background-size: contain;

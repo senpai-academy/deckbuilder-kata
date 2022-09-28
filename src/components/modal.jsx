@@ -4,7 +4,7 @@ const Modal = ({data}) =>{
     console.log({data})
     return (
          <div id="modal">
-                <div className="card-containerModal">
+                <div className="card-container-modal">
                     <div className="card-title">
                         <div className='relative'>
                             <span className='numero'>{data.cost}</span>
@@ -15,7 +15,7 @@ const Modal = ({data}) =>{
                     <div className="card-img">
                         <img src={`/Sprites/CardArt/${data.art}`} alt={data.name}/>
                     </div>
-                    <div className="div-carddetails">
+                    <div className="div-card-details">
                         <div className="card-details">
                             <span className="description-Card">{data.description}</span>
                         </div>
