@@ -37,6 +37,7 @@ function App() {
 
 
   return (
+<>
     <div id="GridMain">
       {(!state.selectedCard) ? "No hay carta" : <Modal data={state.selectedCard} />}
         <div id="DeckGrid" className="backGround">
@@ -48,7 +49,8 @@ function App() {
         </div>
         <div id="DeckInfo" className="backGround">c</div>
 
-    </div> 
+    </div>
+    </> 
   );
 }
 

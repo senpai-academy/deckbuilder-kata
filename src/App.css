@@ -148,7 +148,7 @@ body{
   background-image: url("/public/Sprites/Panels/Title.png");
   background-size: cover;
   width: 100%;
-  height: 50px !important;
+  height: 100px !important;
   position: relative;
   margin-top: -25px;
   align-items: center;
@@ -170,6 +170,7 @@ body{
 .card-img {
   display: flex;
   justify-content: center;
+  background-image: url(../public/Sprites/Panels/BackgroundMedium.png);
 }
 
 .card-img > img {
@@ -193,4 +194,29 @@ body{
 .div-carddetails{
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  background: rgba(0,0,0,0.8);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  pointer-events: none;
+  transition: max-height 500ms;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow: hidden;
+}
+.card-containerModal{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 30%;
+  background-image: url(../public/Sprites/Panels/BackgroundMedium.png);
+  background-repeat: cover;
 }

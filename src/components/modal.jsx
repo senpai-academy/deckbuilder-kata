@@ -3,7 +3,6 @@ import { Loading } from "./Lib";
 const Modal = ({data}) =>{
     console.log({data})
     return (
-       
          <div id="modal">
                 <div className="card-containerModal">
                     <div className="card-title">
@@ -18,7 +17,7 @@ const Modal = ({data}) =>{
                     </div>
                     <div className="div-carddetails">
                         <div className="card-details">
-                            <spam className="description-Card">{data.description}</spam>
+                            <span className="description-Card">{data.description}</span>
                         </div>
                         <div className="card-details">
                             <img alt="a" className="icon-details" height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} />
