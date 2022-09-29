@@ -23,7 +23,7 @@ function App(props) {
         setCardList(cards)
       },[])
   
-
+funciona hijo de puta
 
   return (
 
