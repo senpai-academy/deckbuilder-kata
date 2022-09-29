@@ -2,6 +2,7 @@ import "./App.css";
 import { CardGenerator } from "./Services/CardGenerator";
 import { useEffect, useState } from "react";
 import { CardList, CardsPanel } from "./Cards/Cards";
+import Modal from "./components/displayCard";
 // import Modal from "./components/displayCard"; //
 
 function App() {
@@ -30,12 +31,13 @@ function App() {
   return (
     <>
       <div className="container">
-       <CardsPanel myCards={state.cards}
+      {/*<CardsPanel myCards={state.cards}
        selectedCard={state.selectedCard}
         />
         <CardList myCards={state.cards}
-        selectAction={selectCard}
-        />
+  selectAction={selectCard}*/}
+  
+  <Modal />
       </div>
     </>
   );
