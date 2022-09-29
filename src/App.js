@@ -1,7 +1,7 @@
 
 import './App.css';
 import { CardGenerator } from './Services/CardGenerator';
-
+import Panel from './components/panel';
 import { useEffect, useState } from 'react';
 import {CardsPanel} from './Cards/Cards';
 import {CardBank} from './components/cardBank'
@@ -13,44 +13,46 @@ function App() {
   const [state,setState] = useState({
     cards: null,
     selectedCard:null,
-    myCards:null,
+    myCards:[],
   })
-  
+
+  const [IdTemporal, setIdTemporal] = useState("")
+
   useEffect(()=>{
-    const cardsQuantity = 50;
+    const cardsQuantity = 5;
     let tempCards = []
     for (let i = 0; i < cardsQuantity; i++) {
       const card = new CardGenerator().generateCard()
       tempCards.push(card);
     }
     setState({...state, cards: tempCards})
-    console.log(state.cards)
   },[])
 
   const selectCard = (id) =>{
     if (!id){
       return
     }
+    setIdTemporal(id)
     setState({...state, selectedCard: state.cards[id]})
   }
 
+
   const acceptcard = ()=>{
-    let tempDeckList = state.cards
-
-    
-    console.log("se acepto la carta")
-    setState({...state, myCards: state.selectedCard})
-
-
+    let tempDeckCards = state.cards
+    tempDeckCards.splice(IdTemporal,1)
+    let tempMyCards = state.myCards
+    tempMyCards.push(state.cards[IdTemporal])
+    setState({...state, cards: tempDeckCards})
+    setState({...state, myCards: tempMyCards})
     setState({...state, selectedCard: null})
-    console.log("se limpio la carta seleccionada")
+    setIdTemporal(null)
   }
 
 
 
   const rechazarcard = ()=>{
-    console.log("se rechazo la carta")
     setState({...state, selectedCard: null})
+    setIdTemporal(null)
   }
 
 
@@ -58,14 +60,17 @@ function App() {
   return (
 <>
     <div id="GridMain">
-      {(!state.selectedCard) ? "No hay carta" :
+      {(!state.selectedCard) ? "" :
       <Modal 
       data={state.selectedCard} 
       aceptar={acceptcard}
       rechazar={rechazarcard}
       />}
         <div id="DeckGrid" className="backGround">
-        
+        {(!state.myCards) ? "" :
+          <Panel
+          cards={state.myCards}/>}
+ 
         </div>
         <div id="CardBank" className="backGround">
               <CardBank

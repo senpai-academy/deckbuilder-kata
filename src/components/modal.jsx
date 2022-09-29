@@ -1,7 +1,6 @@
 import React from "react";
 import { Loading } from "./Lib";
 const Modal = ({data, aceptar, rechazar}) =>{
-    console.log({data})
     return (
          <div id="modal">
             <div className="modalBox">

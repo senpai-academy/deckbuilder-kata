@@ -8,7 +8,7 @@ const Panel = (props) =>{
                 props.cards.map((card,key)=>{
                     return (
                         <div key={key}>
-                            <div><img src={"../Sprites/CardArts/"+card.art}/></div>
+                            <div><img src={"../Sprites/CardArt/"+card.art}/></div>
                             <div className={"cost"}>{card.cost}</div>
                             <div>{card.name}</div>
                         </div>
