@@ -1,6 +1,6 @@
 import React from "react";
 import { Loading } from "./Lib";
-const Modal = ({data}) =>{
+const Modal = ({data, aceptar, rechazar}) =>{
     console.log({data})
     return (
          <div id="modal">
@@ -27,8 +27,8 @@ const Modal = ({data}) =>{
                         </div>
                     </div>
                     <div className="button-footer">
-                        <div className="aceptar-carta" img src="/Sprites/Panels/Button.png"/>
-                        <div className="rechazar-carta" img src="/Sprites/Panels/Button.png"/>
+                        <div className="aceptar-carta pointer" img src="/Sprites/Panels/Button.png" onClick={() => aceptar()}/>
+                        <div className="rechazar-carta pointer" img src="/Sprites/Panels/Button.png" onClick={() => rechazar()}/>
                     </div>
                 </div>
             </div>

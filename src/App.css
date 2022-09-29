@@ -262,9 +262,8 @@ body{
   background-size: contain;
   background-image: url(../public/Sprites/Panels/Button.png);
   background-repeat: no-repeat;
-  -webkit-filter: grayscale(2);
-  filter: grayscale(1);
-  
+  filter: invert(5%) sepia(99%) saturate(2904%) hue-rotate(4deg) brightness(64%) contrast(105%);
+
 }
 
 .aceptar-carta {
@@ -273,6 +272,8 @@ body{
   background-size: contain;
   background-image: url(../public/Sprites/Panels/Button.png);
   background-repeat: no-repeat;
+  filter: invert(25%) sepia(88%) saturate(477%) hue-rotate(61deg) brightness(66%) contrast(85%);
+
 }
 
 .Common{

@@ -15,7 +15,7 @@ function App() {
     selectedCard:null,
     myCards:null,
   })
-
+  
   useEffect(()=>{
     const cardsQuantity = 50;
     let tempCards = []
@@ -34,12 +34,36 @@ function App() {
     setState({...state, selectedCard: state.cards[id]})
   }
 
+  const acceptcard = ()=>{
+    let tempDeckList = state.cards
+
+    
+    console.log("se acepto la carta")
+    setState({...state, myCards: state.selectedCard})
+
+
+    setState({...state, selectedCard: null})
+    console.log("se limpio la carta seleccionada")
+  }
+
+
+
+  const rechazarcard = ()=>{
+    console.log("se rechazo la carta")
+    setState({...state, selectedCard: null})
+  }
+
 
 
   return (
 <>
     <div id="GridMain">
-      {(!state.selectedCard) ? "No hay carta" : <Modal data={state.selectedCard} />}
+      {(!state.selectedCard) ? "No hay carta" :
+      <Modal 
+      data={state.selectedCard} 
+      aceptar={acceptcard}
+      rechazar={rechazarcard}
+      />}
         <div id="DeckGrid" className="backGround">
         
         </div>
