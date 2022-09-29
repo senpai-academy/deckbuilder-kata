@@ -3,7 +3,7 @@ import DeckCard from "./DeckCard";
 
 const DeckGrid = (props)=>{
     return(
-        <div>
+        <div className="grid">
             {
                 props.cardsInDeck.map((card, key) => 
                     <DeckCard

@@ -9,10 +9,12 @@ import DeckGrid from './COMPONENTS/DeckGrid/DeckGrid';
 
 
 function App(props) {
-
+  
   const [cardList, setCardList] = useState([])
   const [cardToShow, setCardToShow] = useState(null)
   const [getCard, setGetCard] = useState([])
+  //const [aux, setAux] = useState([])
+  
   /*const [cardsInDeck, setCardsInDeck] = useState([])*/
     
   /*console.log(getCard)*/
@@ -30,14 +32,25 @@ function App(props) {
         } 
         setCardList(cards)
       },[])
-  
+    
+    /*useEffect(()=>{
+      cont++
+      console.log(cont)
+    },[getCard])*/
+
     function addToDeck(card){
-      let aux = []
-      aux.push(card)
-      setGetCard(...getCard, aux)
+      //setAux([...aux, card])
+      setGetCard([...getCard, card]) 
+      console.log(getCard)
+      setCardToShow(null)
+      deleteCardFromBank(card)     
     }
 
-    console.log(getCard)
+    function deleteCardFromBank(card){
+      let reducedList = []
+      reducedList = cardList.filter(element => element != card)
+      setCardList(reducedList)
+    }
 
 
   return (
@@ -56,14 +69,12 @@ function App(props) {
         }
       </div>
 
-      <div className='deck'>
         <DeckGrid
         cardsInDeck={getCard}
         />
-      </div>
 
       <div className='deckInfo'>
-        <img className='fondoInfo' src={"Sprites/Panels/panel.png"}></img>
+
       </div>
 
     </body>
