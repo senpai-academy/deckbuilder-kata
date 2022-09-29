@@ -15,7 +15,6 @@ function App() {
     selectedCard:null,
     myCards:[],
   })
-
   const [IdTemporal, setIdTemporal] = useState("")
 
   useEffect(()=>{
@@ -36,27 +35,21 @@ function App() {
     setState({...state, selectedCard: state.cards[id]})
   }
 
-
   const acceptcard = ()=>{
-    let tempDeckCards = state.cards
+    let tempDeckCards = []
+    Object.assign(tempDeckCards, state.cards)
     tempDeckCards.splice(IdTemporal,1)
     let tempMyCards = state.myCards
     tempMyCards.push(state.cards[IdTemporal])
-    setState({...state, cards: tempDeckCards})
-    setState({...state, myCards: tempMyCards})
-    setState({...state, selectedCard: null})
+    console.log(tempDeckCards)
+    setState({cards: tempDeckCards, myCards: tempMyCards, selectedCard: null})
     setIdTemporal(null)
   }
-
-
 
   const rechazarcard = ()=>{
     setState({...state, selectedCard: null})
     setIdTemporal(null)
   }
-
-
-
   return (
 <>
     <div id="GridMain">
