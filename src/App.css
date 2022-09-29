@@ -198,3 +198,12 @@ body{
   font-size: x-large;
   margin: 10%;
 }
+.imgType{
+  max-height: 6vh;
+  width: auto;
+}
+.centrado{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
