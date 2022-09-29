@@ -172,6 +172,8 @@ body{
   background-size: 85% 100%;
   height: 25vh;
   width: 100%;
+  font-size: xx-large;
+  text-align: center;
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
@@ -189,6 +191,10 @@ body{
   justify-content: center;
   align-items: center;
   margin-left: 3%;
+}
+
+.controltxt{
   text-align: center;
   font-size: x-large;
+  margin: 10%;
 }

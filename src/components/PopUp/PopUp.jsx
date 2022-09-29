@@ -5,6 +5,7 @@ import Art from "./Art/Art";
 import Stats from "./InfoCard/Stats";
 import Description from "./InfoCard/Description";
 
+
 const PopUp=(props)=>{
     return(
         <div id="modal">
@@ -21,7 +22,7 @@ const PopUp=(props)=>{
                 
                     <div className="info">
                         <Description className="PopDescription" card={props.card}/>
-                        <Stats className="stats"/> {/*div con el segundo papiro */}      
+                        <Stats card={props.card}/> {/*div con el segundo papiro */}      
                     </div>
                 
 
