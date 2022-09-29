@@ -29,7 +29,7 @@ function App(props) {
 
     <body>
 
-      <div className='costName'>
+      <div className='costName'>  
         <CardBank
         card={cardList}
         selectCard={setCardToShow}/>
@@ -38,15 +38,14 @@ function App(props) {
         {
           cardToShow != null && <CardPopup card={cardToShow}/>
         }
-        
       </div>
 
       <div className='deck'>
-        <img src={"Sprites/Panels/panel.png"}></img>
+        <img className='fondoDeck' src={"Sprites/Panels/panel.png"}></img>
       </div>
 
       <div className='deckInfo'>
-        <img src={"Sprites/Panels/panel.png"}></img>
+        <img className='fondoInfo' src={"Sprites/Panels/panel.png"}></img>
       </div>
 
     </body>
