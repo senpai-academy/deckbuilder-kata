@@ -1,14 +1,14 @@
 import React from "react";
+import { Loading } from "../components/Lib"
 
 const Modal = (props) => {
-    
+
     return(
         <div className="modal">
         <div className="contenedor-modal">
             <div className="titulo-modal">
-                img trapecio
-                nombre
-                costo
+                <div className="img-titulo">nombre
+                costo</div>
             </div>
             <div >
                 background middle

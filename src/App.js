@@ -37,7 +37,9 @@ function App() {
         <CardList myCards={state.cards}
   selectAction={selectCard}*/}
   
-  <Modal />
+  <Modal 
+  myCards={state.cards}
+  />
       </div>
     </>
   );
