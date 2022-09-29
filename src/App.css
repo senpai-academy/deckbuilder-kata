@@ -3,8 +3,6 @@
   src: url("../public/RINGM___.TTF");
 } 
 
-
-
 *{
   margin: 0;
   padding: 0;
@@ -33,7 +31,7 @@ li {
   background-size: 100% 100%;
 }
 #DeckGrid{
-  display: grid;
+  display: flex;
   grid-area: 1/1/3/2;
   overflow-y: scroll;
   padding: 20px;
@@ -112,11 +110,11 @@ body{
 
 .container{
   display: flex;
+  width: 100%;
   flex-direction: row;
   gap: 1%;
   flex-wrap: wrap;
 }
-
 
 .panel-right{
   flex-basis: 39%;
@@ -135,9 +133,14 @@ body{
   padding: 2em;
 }
 
+.box-card-grid{
+  display: flex;
+}
+
+
 .card-container{
-  min-width: 200px !important;
-  height: 400px;
+  width: 30%;
+  height: 300px;
   flex: 1;
   padding: 10px;
   margin: 10px;
@@ -167,6 +170,19 @@ body{
   justify-content: center;
 }
 
+.card-title-deck{
+  background-image: url("/public/Sprites/Panels/Title.png");
+  background-size: 100% 40px;
+  width: 100%;
+  height: 100px !important;
+  position: relative;
+  margin-top: -25px;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .icon-title{
   vertical-align: middle;
   color: purple;
@@ -186,6 +202,20 @@ body{
   background-image: url(../public/Sprites/Panels/BackgroundMedium.png);
   background-size: 100% 245px;
   background-repeat: no-repeat;
+}
+
+.card-img-panel {
+  display: flex;
+  justify-content: center;
+  background-image: url(../public/Sprites/Panels/BackgroundMedium.png);
+  background-size: 100px 50px;
+  background-repeat: no-repeat;
+}
+
+.card-img-panel > img{
+  display: flex;
+  width: 170px;
+  height: 100px;
 }
 
 .card-img > img {
@@ -210,6 +240,18 @@ body{
   overflow-y: hidden;
 }
 
+.card-details-panel{
+  flex: 1;
+  background-image: url("/public/Sprites/Panels/Panel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  overflow-y: hidden;
+}
 
 #modal {
   position: fixed;
