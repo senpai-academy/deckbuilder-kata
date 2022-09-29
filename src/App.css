@@ -19,52 +19,43 @@ body{
   background-image: url("../public/Sprites/Panels/Panel.png");
   background-size:cover;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   font-family: 'RINGM';
-  color: white;
   overflow-y: scroll;
   grid-area: banco;
 }
 
 .cardBankCost{
-  display: grid;
   background-image: url("../public/Sprites/Icons/Mana.png");
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 80%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  font-family: 'RINGM';
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
-  color: black;
   text-align: center;
-  font-size: 3em;
+  
 }
-
 
 .CardName{
   text-align: center;
-  color: #393939;
-  grid-column: 2/3;
-  font-size: xx-large;
+  justify-content: center;
   font-weight: bold;
 }
 
 .CardCost{
   text-align: center;
-  color: #393939;
-  font-size: xx-large;
-
-  
 }
 
 .cardBankList{
   display: grid;
   grid-template-columns: 1fr 9fr;
   padding:10%;
+  align-items: center;
+  justify-items: center;
+  font-size: 60px;
+  gap: 10%;
 
 }
 
@@ -73,7 +64,7 @@ body{
   grid-template-areas: 
   "cartas banco"
   "cartas info";
-  align-items: center;
+  align-content: center;
   justify-content: center;
 
 }
@@ -84,7 +75,7 @@ body{
 #modal{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -107,9 +98,11 @@ body{
   background-size: 100% 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
-  width: 40vw;
+  grid-template-rows: 1fr 3fr 2fr 1fr;
+  width: 35vw;
   height: 80vh;
+  align-content: center;
+  justify-content: center;
 
 }
 
@@ -130,8 +123,67 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
-    text-align: center;
-      color: #393939;
-      font-size: xx-large;
-      font-weight: bold;
+  color: #393939;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.PopUpArt{ /*Arte del PopUp*/
+  display: flex;
+  background-image: url("../public/Sprites/Panels/BackgroundMedium.png");
+  background-position: center;
+  background-size:85% 100% ;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.PopUpImgSize{
+  max-height: 85%;
+  max-width: 90%;
+  border-radius:10px ;
+  
+}
+
+.info{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 2%;
+  height: 100%;
+  font-size: small;
+  max-height: 10px;
+  align-content: center;
+  justify-content: center;
+}
+
+.stats{
+  background-image: url("../public/Sprites/Panels/Panel.png");
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-position: center;
+  background-size: 85% 100%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10%;
+}
+
+.PopDescription{
+  background-image: url("../public/Sprites/Panels/Panel.png");
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-position: center;
+  background-size: 85% 100%;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
 }

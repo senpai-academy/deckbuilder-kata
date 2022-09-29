@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import CardBank from './components/cardBank/CardBank';
+/*import CardBank from './components/cardBank/CardBank';*/
 import { CardGenerator } from './Services/CardGenerator';
 import React from 'react';
 import PopUp from './components/PopUp/PopUp';
@@ -13,7 +13,7 @@ function App  ()  {
 
   useEffect(()=>{
     let auxCards = []
- for (let i = 0; i < 3; i++) {
+ for (let i = 0; i < 10; i++) {
     const card = new CardGenerator().generateCard();
     auxCards.push(card)
   }
@@ -28,13 +28,15 @@ function App  ()  {
   <div className='contenedor'>
     {
       selectedCard != null &&  <PopUp card={selectedCard}/>
-    }
-  
+    } 
+
+   
+
  
   </div>
 )
 }
 export default App;
+/*   <CardBank Cardlist={cards}/> */
 
 
-/*<CardBank Cardlist={cards}/>*/ 

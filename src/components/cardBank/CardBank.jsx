@@ -10,14 +10,9 @@ const CardBank = (props)=>{
                     {props.Cardlist.map((Card,key) => {
                     return(
                         <React.Fragment key={key} >
-                            
-                            <div >
-                                <CardCost cost={Card.cost}/>
-                            </div>
+                                <CardCost cost={Card.cost} className="cardBankCost"/>
 
-                            <div >
                                 <CardName name={Card.name}/>
-                            </div>  
                             
                         </React.Fragment>
                     )
