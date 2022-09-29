@@ -1,17 +1,10 @@
 import "./App.css";
 import { CardGenerator } from "./Services/CardGenerator";
 import { useEffect, useState } from "react";
-import { CardsPanel } from "./Cards/Cards";
-import {CardList} from "./components/Main";
+import { CardList, CardsPanel } from "./Cards/Cards";
+// import Modal from "./components/displayCard"; //
 
 function App() {
-  /* let cards = []
-    for (let i=0;i<10;i++) {
-    const card = new CardGenerator().generateCard(); 
-    cards.push(card)
-  }
-  console.log(cards)*/
-  // const card = new CardGenerator().generateCard();
 
   const [state, setState] = useState({
     cards: null,
@@ -29,11 +22,20 @@ function App() {
     console.log(state.cards);
   }, []);
 
+  const selectCard = (idx) =>{
+    console.log(idx)
+    setState({ ...state, selectedCard: state.cards[idx] });
+  }
+
   return (
     <>
       <div className="container">
-        <CardsPanel myCards={state.cards} />
-        <CardList myCards={state.cards}/>
+       <CardsPanel myCards={state.cards}
+       selectedCard={state.selectedCard}
+        />
+        <CardList myCards={state.cards}
+        selectAction={selectCard}
+        />
       </div>
     </>
   );

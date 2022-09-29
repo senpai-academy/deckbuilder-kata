@@ -1,12 +1,15 @@
 import { Loading } from "../components/Lib"
 
-const CardsPanel = ({myCards}) => {
+const CardsPanel = ({myCards,selectedCard}) => {
 
     return (
         (myCards) ?
         <div className="panel panel-left">
+            {(selectedCard)?
+            selectedCard.name : ''
+            }
             {myCards.map((card, index) => (
-             <></>         
+            <></>         
             ))}
         </div>: <Loading/>
     )
@@ -29,4 +32,32 @@ const Card = ({idx, data}) => {
     )
 }
 
-export {CardsPanel,Card} 
+const CardList = ({ myCards,selectAction }) => {
+    return myCards ? (
+      <div className="panel panel-right">
+        <ul className="card-list">
+          {myCards.map((card, index) => (
+            <CardItem
+             idx={index}
+              data={card}
+              selectAction={selectAction}
+              ></CardItem>
+          ))}
+        </ul>
+      </div>
+    ) : (
+      <Loading />
+    );
+  };
+  
+  const CardItem = (props) => {
+    return (
+      <li key={props.idx}
+      onClick = {()=>props.selectAction(props.idx)}
+      >
+        <span id="costCard">{props.data.cost}</span>
+        <span id="nameCard">{props.data.name}</span>
+      </li>
+  )}
+
+export {CardsPanel,Card,CardList} 
