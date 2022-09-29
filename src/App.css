@@ -81,6 +81,7 @@ body{
 }
 
 .namecost{  /*Clase del PopUp*/
+  grid-row: 1/2;
   justify-items: center;
   align-items: center;
   display: grid;
@@ -90,7 +91,6 @@ body{
   background-repeat:no-repeat ;
   background-position:center ;
   background-size: 100% 100%;
-  
 }
 
 #PopUpContainer {
@@ -103,7 +103,6 @@ body{
   height: 80vh;
   align-content: center;
   justify-content: center;
-
 }
 
 .PopUpName {
@@ -129,6 +128,7 @@ body{
 }
 
 .PopUpArt{ /*Arte del PopUp*/
+  grid-row: 2/3;
   display: flex;
   background-image: url("../public/Sprites/Panels/BackgroundMedium.png");
   background-position: center;
@@ -143,21 +143,24 @@ body{
 
 .PopUpImgSize{
   max-height: 85%;
-  max-width: 90%;
+  max-width: 80%;
   border-radius:10px ;
   
 }
 
 .info{
+  grid-row: 3/4;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
   margin-top: 2%;
-  height: 100%;
+  height: 100vh;
+  width: inherit;
   font-size: small;
   max-height: 10px;
   align-content: center;
   justify-content: center;
+  margin-top: 25%
 }
 
 .stats{
@@ -167,7 +170,7 @@ body{
   grid-template-rows: 1fr 1fr 1fr;
   background-position: center;
   background-size: 85% 100%;
-  height: 100%;
+  height: 25vh;
   width: 100%;
   background-repeat: no-repeat;
   justify-content: center;
@@ -186,4 +189,6 @@ body{
   justify-content: center;
   align-items: center;
   margin-left: 3%;
+  text-align: center;
+  font-size: x-large;
 }
