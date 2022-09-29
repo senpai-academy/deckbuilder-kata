@@ -119,8 +119,11 @@ body{
 
 .deck{
   grid-area: desk;
-  height: 100%;
-  width: 100%;
+  background-image: url("../public/Sprites/Panels/Panel.png");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .deckInfo{

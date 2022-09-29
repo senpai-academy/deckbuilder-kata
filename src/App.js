@@ -5,14 +5,22 @@ import CardPopup from './COMPONENTS/CardPopup/CardPopup';
 import { useState } from "react";
 import { useEffect } from "react";
 import { CardGenerator } from './Services/CardGenerator';
+import DeckGrid from './COMPONENTS/DeckGrid/DeckGrid';
 
 
 function App(props) {
 
   const [cardList, setCardList] = useState([])
   const [cardToShow, setCardToShow] = useState(null)
-
+  const [getCard, setGetCard] = useState([])
+  /*const [cardsInDeck, setCardsInDeck] = useState([])*/
     
+  /*console.log(getCard)*/
+
+    /*useEffect(()=>{
+      let cardsToDeck = []
+      setCardsInDeck(...cardsInDeck, getCard)
+    },[])*/
 
     useEffect(()=>{
         let cards = []
@@ -23,6 +31,13 @@ function App(props) {
         setCardList(cards)
       },[])
   
+    function addToDeck(card){
+      let aux = []
+      aux.push(card)
+      setGetCard(...getCard, aux)
+    }
+
+    console.log(getCard)
 
 
   return (
@@ -36,12 +51,15 @@ function App(props) {
       </div>
       <div className='modalContainer'>
         {
-          cardToShow != null && <CardPopup card={cardToShow}/>
+          cardToShow != null && <CardPopup card={cardToShow}
+                                           getCard={addToDeck}/>
         }
       </div>
 
       <div className='deck'>
-        <img className='fondoDeck' src={"Sprites/Panels/panel.png"}></img>
+        <DeckGrid
+        cardsInDeck={getCard}
+        />
       </div>
 
       <div className='deckInfo'>

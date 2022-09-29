@@ -13,7 +13,7 @@ const CardPopup = (props)=>{
                 <img className="popupImg" src={`Sprites/CardArt/${props.card.art}`}/>
             </div>
             <div className="buttons">
-                <img src={"Sprites/Panels/Button.png"}/>
+                <img src={"Sprites/Panels/Button.png"} onClick={()=>props.getCard(props.card)}/>
                 <img src={"Sprites/Panels/Button.png"}/>
             </div>
         </div>
