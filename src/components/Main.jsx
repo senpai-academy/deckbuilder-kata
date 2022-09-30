@@ -1,19 +1,19 @@
 import React from "react";
 import { Loading } from "../components/Lib";
 
-const CardList = ({ myCards }) => {
-  return myCards ? (
-    <div className="panel panel-right">
-      <ul className="card-list">
-        {myCards.map((card, index) => (
-          <Card idx={index} data={card}></Card>
-        ))}
-      </ul>
-    </div>
-  ) : (
-    <Loading />
-  );
-};
+// const CardList = ({ myCards }) => {
+//   return myCards ? (
+//     <div className="panel panel-right">
+//       <ul className="card-list">
+//         {myCards.map((card, index) => (
+//           <Card idx={index} data={card}></Card>
+//         ))}
+//       </ul>
+//     </div>
+//   ) : (
+//     <Loading />
+//   );
+// };
 
 const Card = (props) => {
   return (

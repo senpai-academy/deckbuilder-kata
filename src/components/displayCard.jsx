@@ -7,12 +7,11 @@ const Modal = (props) => {
         <div className="modal">
         <div className="contenedor-modal">
             <div className="titulo-modal">
-                <div className="img-titulo">nombre
-                costo</div>
+                <div className="img-titulo">{props.card.name}
+                {props.card.cost}</div>
             </div>
-            <div >
-                background middle
-                imagen carta
+            <div className="modal-img">
+            <img src={`/Sprites/CardArt/${props.card.art}`} className="foto-carta"/>
             </div>
             <div class="data-container">
                 <div className="description">

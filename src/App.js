@@ -6,10 +6,10 @@ import Modal from "./components/displayCard";
 // import Modal from "./components/displayCard"; //
 
 function App() {
-
   const [state, setState] = useState({
     cards: null,
-    selectedCard: null,
+    selectedCard:  new CardGenerator().generateCard(),
+    modalOpen: false,
   });
 
   useEffect(() => {
@@ -23,23 +23,23 @@ function App() {
     console.log(state.cards);
   }, []);
 
-  const selectCard = (idx) =>{
-    console.log(idx)
-    setState({ ...state, selectedCard: state.cards[idx] });
-  }
+  const selectCard = (idx) => {
+    console.log(idx);
+    setState({ ...state, selectedCard: state.cards[idx], modalOpen: true });
+  };
 
   return (
     <>
       <div className="container">
-      {/*<CardsPanel myCards={state.cards}
+        {/*<CardsPanel myCards={state.cards}
        selectedCard={state.selectedCard}
         />
         <CardList myCards={state.cards}
   selectAction={selectCard}*/}
-  
-  <Modal 
-  myCards={state.cards}
-  />
+        {state.selectedCard && 
+        <Modal 
+        card={state.selectedCard} 
+        />}
       </div>
     </>
   );
