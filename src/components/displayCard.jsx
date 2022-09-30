@@ -15,6 +15,7 @@ const Modal = (props) => {
             </div>
             <div class="data-container">
                 <div className="description">
+                    <img src="/public/Sprites/Panels/Panel.png"/>
 
                 </div>
                 <div className="atributos" >
