@@ -42,7 +42,8 @@ function App(props) {
       //setAux([...aux, card])
       setGetCard([...getCard, card])
       setCardToShow(null)
-      deleteCardFromBank(card)     
+      deleteCardFromBank(card)
+      console.log(getCard)
     }
 
     function deleteCardFromBank(card){
@@ -58,6 +59,7 @@ function App(props) {
     function backToBank(card){
        setCardList([...cardList, card])
        renderBank(card)
+       console.log("dale")
     }
 
     function renderBank(card){
