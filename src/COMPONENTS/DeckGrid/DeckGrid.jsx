@@ -9,6 +9,7 @@ const DeckGrid = (props)=>{
                     <DeckCard
                         card={card}
                         key={key}
+                        backToBank={props.backToBank}
                 />)
             }
         </div>        

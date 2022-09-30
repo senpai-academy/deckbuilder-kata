@@ -2,7 +2,7 @@ import React from "react";
 
 const DeckCard = (props)=>{
     return(
-        <div className="gridBackground">
+        <div className="gridBackground" onClick={props.backToBank(props.card)}>
             <div>
                 <span>{props.card.name}</span>
             </div>

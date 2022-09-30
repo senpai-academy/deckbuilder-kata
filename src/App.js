@@ -55,6 +55,18 @@ function App(props) {
       setCardToShow(null)
     }
 
+    function backToBank(card){
+       setCardList([...cardList, card])
+       renderBank(card)
+    }
+
+    function renderBank(card){
+      let reducedList = []
+      reducedList = getCard.filter(element => element != card)
+      setGetCard(reducedList)
+    }
+
+
 
   return (
 
@@ -75,6 +87,7 @@ function App(props) {
 
         <DeckGrid
         cardsInDeck={getCard}
+        backToBank={backToBank}
         />
 
       <div className='deckInfo'>
