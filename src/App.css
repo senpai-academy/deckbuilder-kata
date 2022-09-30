@@ -90,7 +90,7 @@ body{
   background-image: url("../public/Sprites/Panels/Title.png");
   background-repeat:no-repeat ;
   background-position:center ;
-  background-size: 100% 100%;
+  background-size: 95% 90%;
 }
 
 #PopUpContainer {
@@ -99,7 +99,7 @@ body{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 3fr 2fr 1fr;
-  width: 35vw;
+  width: 25vw;
   height: 80vh;
   align-content: center;
   justify-content: center;
@@ -108,15 +108,16 @@ body{
 .PopUpName {
   text-align: center;
   grid-column: 2/3;
-  font-size: xx-large;
+  font-size: 75%;
   font-weight: bold;
+  margin-right: 20%;
 }
 
 .PopUpCost {
   display: grid;
   background-image: url("../public/Sprites/Icons/Mana.png");
-  height: 100%;
-  width: 60%;
+  height: 80%;
+  width: 65%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   justify-content: center;
@@ -125,6 +126,7 @@ body{
   color: #393939;
   font-size: xx-large;
   font-weight: bold;
+  margin-left: 30%;
 }
 
 .PopUpArt{ /*Arte del PopUp*/
@@ -138,7 +140,6 @@ body{
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-
 }
 
 .PopUpImgSize{
@@ -160,7 +161,7 @@ body{
   max-height: 10px;
   align-content: center;
   justify-content: center;
-  margin-top: 25%
+  margin-top: 27%
 }
 
 .stats{
@@ -170,8 +171,8 @@ body{
   grid-template-rows: 1fr 1fr 1fr;
   background-position: center;
   background-size: 85% 100%;
-  height: 25vh;
-  width: 100%;
+  height: 30vh;
+  width: 105%;
   font-size: xx-large;
   text-align: center;
   background-repeat: no-repeat;
@@ -186,7 +187,7 @@ body{
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   background-position: center;
-  background-size: 85% 100%;
+  background-size: 90% 100%;
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
@@ -201,6 +202,7 @@ body{
 .imgType{
   max-height: 6vh;
   width: auto;
+  margin-left: 10%;
   
 }
 .centrado{
@@ -222,12 +224,15 @@ body{
   grid-template-rows: 1fr;
   justify-items: center;
   position: relative;
-  bottom: -40%
+  bottom: -45%;
+  margin-left: 20%;
+  margin-right: 15%;
 }
 
 .buttonsize{
   height: 10vh;
   width: 10vh;
+  filter: grayscale(15%);
 }
 
 .buttonsize:hover{

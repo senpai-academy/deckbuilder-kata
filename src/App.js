@@ -6,8 +6,6 @@ import React from 'react';
 import PopUp from './components/PopUp/PopUp';
 
 function App  ()  {
-
- 
   const [selectedCard, setSelectedCard] =useState(null)
   const [cards, setCards] = useState([])
 
@@ -24,17 +22,13 @@ function App  ()  {
     setSelectedCard(cards[0])
   },[cards])
 
- return (
-  <div className='contenedor'>
-    {
-      selectedCard != null &&  <PopUp card={selectedCard}/>
-    } 
-
-   
-
- 
-  </div>
-)
+  return (
+    <div className='contenedor'>
+      {
+        selectedCard != null &&  <PopUp card={selectedCard}/>
+      } 
+    </div>
+  )
 }
 export default App;
 /*   <CardBank Cardlist={cards}/> */
