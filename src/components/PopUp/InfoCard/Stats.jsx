@@ -1,6 +1,7 @@
 import React from "react";
 import CardType from "../CardType/CardType";
 import AttackScore from "../attack/AttackScore";
+import DefenseScore from "../Defense/DefenseScore";
 
 const Stats = (props) => {
     return(
@@ -16,7 +17,9 @@ const Stats = (props) => {
                 <div>
                     <img src="/Sprites/Icons/Defense.png" alt="" className="imgType"/>
                 </div>
-                <div></div>
+                <div>
+                    <DefenseScore DefenseScore={props.card.defenseScore}/>
+                </div>
             </div>
         </div>
         )

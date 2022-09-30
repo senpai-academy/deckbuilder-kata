@@ -201,6 +201,7 @@ body{
 .imgType{
   max-height: 6vh;
   width: auto;
+  
 }
 .centrado{
   display: flex;
@@ -209,7 +210,11 @@ body{
 }
 
 .doscol{
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  font-size: xxx-large;
+  align-content: center;
+  justify-content: center;
+  
 }

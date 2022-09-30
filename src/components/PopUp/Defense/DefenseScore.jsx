@@ -1,13 +1,13 @@
 import React from "react";
 
-const AttackScore = (props) => {
+const DefenseScore = (props) => {
     return(
         <div className={props.className} >
             <div >
-                {props.AttackScore}
+                {props.DefenseScore}
             </div>
         </div>
         )
 }
 
-export default AttackScore;
+export default DefenseScore;
