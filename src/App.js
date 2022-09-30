@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import {CardsPanel} from './Cards/Cards';
 import {CardBank} from './components/cardBank'
 import Modal from "./components/modal"
+import DeckInfo from './components/deckInfo';
 
 
 function App() {
@@ -18,13 +19,14 @@ function App() {
   const [IdTemporal, setIdTemporal] = useState("")
 
   useEffect(()=>{
-    const cardsQuantity = 50;
+    const cardsQuantity = 30;
     let tempCards = []
     for (let i = 0; i < cardsQuantity; i++) {
       const card = new CardGenerator().generateCard()
       tempCards.push(card);
     }
     setState({...state, cards: tempCards})
+    console.log(state.card)
   },[])
 
   const selectCard = (id) =>{
@@ -77,7 +79,12 @@ function App() {
               <CardBank
               myCards={state.cards} select={selectCard}/>   
         </div>
-        <div id="DeckInfo" className="backGround">c</div>
+        <div id="DeckInfo" className="backGround">
+          <DeckInfo
+        myCards={state.myCards}/>
+      </div>
+
+
 
     </div>
     </> 
