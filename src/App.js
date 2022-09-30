@@ -40,8 +40,7 @@ function App(props) {
 
     function addToDeck(card){
       //setAux([...aux, card])
-      setGetCard([...getCard, card]) 
-      console.log(getCard)
+      setGetCard([...getCard, card])
       setCardToShow(null)
       deleteCardFromBank(card)     
     }
@@ -50,6 +49,10 @@ function App(props) {
       let reducedList = []
       reducedList = cardList.filter(element => element != card)
       setCardList(reducedList)
+    }
+
+    function cancel(){
+      setCardToShow(null)
     }
 
 
@@ -65,7 +68,8 @@ function App(props) {
       <div className='modalContainer'>
         {
           cardToShow != null && <CardPopup card={cardToShow}
-                                           getCard={addToDeck}/>
+                                           getCard={addToDeck}
+                                           cancel={cancel}/>
         }
       </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
 
 const CardPopup = (props)=>{
+
     return(
         <div className="modal">
             <div className="titleContainer">
@@ -14,7 +15,7 @@ const CardPopup = (props)=>{
             </div>
             <div className="buttons">
                 <img src={"Sprites/Panels/Button.png"} onClick={()=>props.getCard(props.card)}/>
-                <img src={"Sprites/Panels/Button.png"}/>
+                <img src={"Sprites/Panels/Button.png"} onClick={props.cancel}/>
             </div>
         </div>
 
