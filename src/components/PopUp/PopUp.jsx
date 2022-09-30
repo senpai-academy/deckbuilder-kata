@@ -26,11 +26,13 @@ const PopUp=(props)=>{
                     </div>
                 
 
-                <div>
+                <div className="buttonpos">
                     <div>
-                        
+                        <img src="/Sprites/Panels/ButtonGreen.png" className="buttonsize" alt=""/>
                     </div>
-                    <div></div>
+                    <div>
+                        <img src="/Sprites/Panels/ButtonRed.png" className="buttonsize" alt=""/>
+                    </div>
                 </div>
             </div>
         </div>
