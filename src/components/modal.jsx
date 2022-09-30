@@ -10,7 +10,7 @@ const Modal = ({data, aceptar, rechazar}) =>{
                             <span className='numero'>{data.cost}</span>
                             <div className='img-mana'></div>
                         </div>   
-                        <span className="text-title">{data.name}</span>
+                        <span className="text-title-modal">{data.name}</span>
                     </div>
                     <div className="card-img">
                         <img src={`/Sprites/CardArt/${data.art}`} alt={data.name}/>
@@ -20,9 +20,11 @@ const Modal = ({data, aceptar, rechazar}) =>{
                             <span className="description-Card">{data.description}</span>
                         </div>
                         <div className="card-details">
-                            <img alt="a" className={"icon-details "+(data.rarity.value)} height={'30px'} src={`/Sprites/Icons/${data.cardType}.png`} />
-                            <span><img alt="b" className="icon-details" height={'30px'} src={`/Sprites/Icons/Attack.png`} />{data.attackScore}</span>
-                            <span><img alt="c" className="icon-details" height={'30px'} src={`/Sprites/Icons/Defense.png`} />{data.defenseScore}</span>
+                            <img alt="a" className={"icon-details "+(data.rarity.value)} height={'50px'} src={`/Sprites/Icons/${data.cardType}.png`} />
+                            <span className="detail-text-modal">
+                                <img alt="b" className="icon-details" height={'40px'} src={`/Sprites/Icons/Attack.png`} />{data.attackScore}</span>
+                            <span className="detail-text-modal">
+                                <img alt="c" className="icon-details" height={'40px'} src={`/Sprites/Icons/Defense.png`} />{data.defenseScore}</span>
                         </div>
                     </div>
                     <div className="button-footer">

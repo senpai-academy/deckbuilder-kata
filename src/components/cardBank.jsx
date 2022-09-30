@@ -12,7 +12,7 @@ const CardBank = ({myCards, select}) => {
 }
 const Card = ({idx,data,select}) => {
     return (
-        <li className="flex-between fila-lista pointer" onClick={() => select(idx)} >
+        <li className="flex-between fila-lista pointer" id={idx} onClick={() => select(idx)} >
                 <div className='relative'>
                     <span className='numero'>{data.cost}</span>
                     <div className='img-mana'></div>

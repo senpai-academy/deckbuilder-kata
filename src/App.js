@@ -18,7 +18,7 @@ function App() {
   const [IdTemporal, setIdTemporal] = useState("")
 
   useEffect(()=>{
-    const cardsQuantity = 5;
+    const cardsQuantity = 50;
     let tempCards = []
     for (let i = 0; i < cardsQuantity; i++) {
       const card = new CardGenerator().generateCard()
@@ -28,9 +28,6 @@ function App() {
   },[])
 
   const selectCard = (id) =>{
-    if (!id){
-      return
-    }
     setIdTemporal(id)
     setState({...state, selectedCard: state.cards[id]})
   }
