@@ -1,14 +1,14 @@
 import React from "react";
-
-const Panel = (props) =>{
+import { Loading } from "../components/Lib"
+const Panel = ({props, select}) =>{
     return (
-        
+        {props}?
         <div className={"container"}>
             {
-                props.cards.map((card,key)=>{
+                props.map((card,key)=>{
                     return (
 
-                            <div className={"card-container"} key={key}>
+                            <div className={"card-container"} key={key} onClick={() => select(key)}>
                                 <div className="card-title-deck">
                                     <div className='relative'>
                                         <span className='numero-deck'>{card.cost}</span>
@@ -33,7 +33,7 @@ const Panel = (props) =>{
                 })
             }
             
-        </div>
+        </div>: <Loading/>
     )
 }
 

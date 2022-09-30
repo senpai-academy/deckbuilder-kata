@@ -31,6 +31,17 @@ function App() {
     setIdTemporal(id)
     setState({...state, selectedCard: state.cards[id]})
   }
+  const selectCardFromDeck = (id) =>{
+    console.log(id)
+    let tempMyCards2 = []
+    Object.assign(tempMyCards2, state.myCards)
+    tempMyCards2.splice(id,1)
+    let tempDeckCards2 = state.cards
+    tempDeckCards2.push(state.myCards[id])
+    setState({myCards: tempMyCards2, cards: tempDeckCards2, selectedCard: null})
+  }
+
+
 
   const acceptcard = ()=>{
     let tempDeckCards = []
@@ -59,7 +70,7 @@ function App() {
         <div id="DeckGrid" className="backGround">
         {(!state.myCards) ? "" :
           <Panel
-          cards={state.myCards}/>}
+          props={state.myCards} select={selectCardFromDeck}/>}
  
         </div>
         <div id="CardBank" className="backGround">
