@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import CardBank from './COMPONENTS/Bank/CardBank';
 import CardPopup from './COMPONENTS/CardPopup/CardPopup';
+import DeckInfo from './COMPONENTS/DeckInfo/DeckInfo'
 import { useState } from "react";
 import { useEffect } from "react";
 import { CardGenerator } from './Services/CardGenerator';
@@ -13,16 +14,7 @@ function App(props) {
   const [cardList, setCardList] = useState([])
   const [cardToShow, setCardToShow] = useState(null)
   const [getCard, setGetCard] = useState([])
-  //const [aux, setAux] = useState([])
-  
-  /*const [cardsInDeck, setCardsInDeck] = useState([])*/
-    
-  /*console.log(getCard)*/
-
-    /*useEffect(()=>{
-      let cardsToDeck = []
-      setCardsInDeck(...cardsInDeck, getCard)
-    },[])*/
+  const [storeCard, setStoreCArd] = useState("")
 
     useEffect(()=>{
         let cards = []
@@ -32,17 +24,12 @@ function App(props) {
         } 
         setCardList(cards)
       },[])
-    
-    /*useEffect(()=>{
-      cont++
-      console.log(cont)
-    },[getCard])*/
 
     function addToDeck(card){
-      //setAux([...aux, card])
       setGetCard([...getCard, card])
       setCardToShow(null)
       deleteCardFromBank(card)
+      setStoreCArd(card)
       console.log(getCard)
     }
 
@@ -92,9 +79,8 @@ function App(props) {
         backToBank={backToBank}
         />
 
-      <div className='deckInfo'>
-
-      </div>
+        <DeckInfo
+        getInfo={getCard}/>
 
     </body>
 

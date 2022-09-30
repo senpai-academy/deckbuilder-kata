@@ -44,7 +44,7 @@ body{
   height: 100%;
   background-image: url("../public/Sprites/Panels/Panel.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   object-fit: cover;
   overflow-y: scroll; 
   -ms-overflow-style: none;  /* IE and Edge */
@@ -122,7 +122,7 @@ body{
 .deck{
   grid-area: desk;
   background-image: url("../public/Sprites/Panels/Panel.png");
-  background-size: cover;
+  background-size: 100% 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -132,7 +132,11 @@ body{
 .deckInfo{
   grid-area: icons;
   background-image: url("../public/Sprites/Panels/Panel.png");
-  background-size: cover;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .fondoDeck{
   width: -webkit-fill-available;
@@ -177,4 +181,9 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.troopClass{
+  display: flex;
+  flex-direction: row;
 }
