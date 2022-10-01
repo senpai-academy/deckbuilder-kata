@@ -80,7 +80,8 @@ function App(props) {
         />
 
         <DeckInfo
-        getInfo={getCard}/>
+        getInfo={getCard}
+        storeCard={storeCard}/>
 
     </body>
 
