@@ -83,9 +83,6 @@ function App() {
           <DeckInfo
         myCards={state.myCards}/>
       </div>
-
-
-
     </div>
     </> 
   );

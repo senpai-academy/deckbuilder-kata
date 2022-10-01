@@ -104,7 +104,19 @@ li {
   top: 15px;
   
 }
-
+.img-mana-deckTotal {
+  background-image: url("../public/Sprites/Icons/Mana.png");
+  filter: invert(69%) sepia(49%) saturate(7005%) hue-rotate(234deg) brightness(104%) contrast(104%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 15px;
+  
+}
 .numero-deck{
   font-family: 'RINGM';
   font-size: 20px;
@@ -112,6 +124,15 @@ li {
   top: 25px;
   left: 15px;
   z-index: 2;
+}
+.numero-decktotal{
+  font-family: 'RINGM';
+  font-size: 30px;
+  position: absolute;
+  top: 43px;
+  left: 25px;
+  z-index: 2;
+  color: white;
 }
 
 .text-title-deck{
@@ -140,6 +161,8 @@ li {
 body{
   background-color: #000;
   font-family:'RINGM';
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .container{
@@ -400,7 +423,7 @@ body{
 .deck-top{
   display: grid;
   grid-area: 1/1/2/2;
-margin-top: 5%;
+  margin-top: 5%;
 }
 .deck-mid{
   display: grid;
@@ -420,28 +443,31 @@ margin-top: 5%;
 .deckTopDetails{
   text-align: center;
   font-size: xx-large;
-
   color: white;
 }
 .iconDeckDetails{
   text-align: center;
   font-size: xx-large;
-align-items: center;
+  align-items: center;
   color: white;
   display: flex;
 }
 .deck-spell{
   display: flex;
 }
+
 .icon-deck{
   display: flex;
-  
 }
+
 .deck-instant{
 display: flex;
 justify-self: flex-end;
 }
+
 .deck-bot{
   display: grid;
   grid-area: 3/1/4/2;
+  align-items: center;
+  justify-content: center;
 }

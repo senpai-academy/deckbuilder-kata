@@ -1,9 +1,14 @@
 
 
 const DeckInfo = ({myCards}) => {
+    let manatotalcost = 0
     let criaturascartas = 0
     let spellcartas = 0
     let instantcartas = 0
+    myCards.forEach(card => {
+        manatotalcost = card.cost + manatotalcost
+});
+
 myCards.forEach(card => {
     switch (card.cardType) {
         case "Creature":
@@ -21,11 +26,9 @@ myCards.forEach(card => {
         <div>
             <div className={"deck-Info"}>
                 <div className="deck-top">
-                    
                     <span className="deckTopDetails">
-{myCards.length} / 30
+                        {myCards.length} / 30
                     </span>
-
                 </div>
 
                 <div className="deck-mid flow-row">
@@ -52,6 +55,10 @@ myCards.forEach(card => {
                 </div>
 
                 <div className="deck-bot">
+                        <div className='relative'>
+                            <span className='numero-decktotal'>{manatotalcost}</span>
+                            <div className='img-mana-deckTotal'></div>
+                        </div>   
                 </div>
             </div>
         </div>
