@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import CardBank from './components/cardBank/CardBank';
+import CardBank from './components/CardBank/CardBank';
 import { CardGenerator } from './Services/CardGenerator';
 import React from 'react';
 import PopUp from './components/PopUp/PopUp';
@@ -25,9 +25,6 @@ function App  ()  {
   return (
     <div className='contenedor'>
       <CardBank Cardlist={cards} />
-
-    
-      
     </div>
   )
 }
