@@ -22,7 +22,9 @@ function App  ()  {
   },[])
 
   const selectCard = (id) => {
-    setSelectedCard(id)
+    let card = cards[id]
+    setSelectedCard(card)
+    console.log(card)
   }
 
   return (

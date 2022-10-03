@@ -9,7 +9,7 @@ const CardBank = (props)=>{
                 <div className="cardBankList">
                     {props.Cardlist.map((Card,key) => {
                     return(
-                        <div key={key} onclick={() => props.selectCard(key)} className="listItem" >
+                        <div key={key} onClick={() => props.selectCard(key)} className="listItem" >
                                 <CardCost cost={Card.cost} className="cardBankCost"/>
                                 <CardName name={Card.name} className="cardBankName" />                        
                         </div>
