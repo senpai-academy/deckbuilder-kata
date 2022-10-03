@@ -21,13 +21,16 @@ function App  ()  {
     setCards(auxCards)
   },[])
 
-  useEffect(()=>{
-    setSelectedCard(cards[0])
-  },[cards])
+  const selectCard = (id) => {
+    setSelectedCard(id)
+  }
 
   return (
     <div className='contenedor'>
-      <CardBank Cardlist={cards}/>
+      {
+      selectedCard != null && <PopUp card={selectedCard}/>
+      }
+      <CardBank Cardlist={cards} selectCard={selectCard}/>
       <DeckGrid/>
       <DeckInfo/>
     </div>
@@ -35,9 +38,7 @@ function App  ()  {
 }
 export default App;
 
-/*{
-  selectedCard != null && <PopUp card={selectedCard} />
-}*/
+
 
 
 

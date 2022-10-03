@@ -12,10 +12,10 @@ html{
   display: none;
 }
 body{
-    font-family: 'RINGM';
-    color: #393939;
-    font-size: xx-large;
-    width: 100%;
+  font-family: 'RINGM';
+  color: #393939;
+  font-size: xx-large;
+  width: 100%;
 }
 
 .contenedor {
@@ -40,6 +40,22 @@ body{
   grid-row: 1/2;
 }
 
+.cardBankList {
+  display: grid;
+  gap: 5%;
+  height: 50%;
+  width: inherit;
+  margin: 8%;
+  
+}
+
+.listItem {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  width: 100%;
+  gap: 15%
+}
+
 .cardBankCost{
   background-image: url("../public/Sprites/Icons/Mana.png");
   height: 100%;
@@ -49,29 +65,22 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
+  grid-column: 1/2;
 }
 
-.CardName{
+.CardBankName{
+  display: flex;
   text-align: center;
+  align-items: center;
   justify-content: center;
   font-weight: bold;
+  grid-column: 2/3;
+  margin-left: 10%;
 }
 
-.CardCost{
-  text-align: center;
-}
 
-.cardBankList{
-  display: grid;
-  grid-template-columns: 1fr 9fr;
-  align-items: center;
-  justify-items: center;
-  gap: 5%;
-  height: inherit;
-  width: inherit;
-  grid-column: 1/2;
-  margin: 6%;
-}
+
+
 
 /*----------POP UP------------*/
 #modal{
