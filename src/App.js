@@ -4,14 +4,17 @@ import CardBank from './components/CardBank/CardBank';
 import { CardGenerator } from './Services/CardGenerator';
 import React from 'react';
 import PopUp from './components/PopUp/PopUp';
+import DeckGrid from './components/DeckGrid/DeckGrid';
+import DeckInfo from './components/DeckInfo/DeckInfo';
 
 function App  ()  {
+  const cardsQuantity = 20;
   const [selectedCard, setSelectedCard] =useState(null)
   const [cards, setCards] = useState([])
 
   useEffect(()=>{
     let auxCards = []
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < cardsQuantity; i++) {
     const card = new CardGenerator().generateCard();
     auxCards.push(card)
     }
@@ -24,7 +27,9 @@ function App  ()  {
 
   return (
     <div className='contenedor'>
-      <CardBank Cardlist={cards} />
+      <CardBank Cardlist={cards}/>
+      <DeckGrid/>
+      <DeckInfo/>
     </div>
   )
 }
